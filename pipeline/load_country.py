@@ -17,7 +17,7 @@ WS      = "geo"
 DS      = "GEO_PostGIS"
 
 # Local data folder structure
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_DIR   = os.path.join(BASE_DIR, "db")
 DIMS     = ["geo", "personnel", "resources", "outcomes"]
 
