@@ -7,6 +7,7 @@ import geopandas as gpd
 import pandas as pd
 import psycopg2
 from sqlalchemy import create_engine
+from package_country import *
 
 # ── Config ────────────────────────────────────────────────────────
 DB_URL  = "postgresql://geomain:geoRocks2026@206.189.232.243:5432/geodb"
@@ -46,6 +47,22 @@ def load_csvs(iso3):
             index=False
         )
         print(f"  ✓ Loaded {table} ({len(df):,} rows)")
+
+
+
+def package_and_upload(iso3):
+    print(f"\n── Packaging and uploading {iso3} ──")
+    import subprocess
+    # Run package_country.py as a subprocess
+    script = os.path.join(BASE_DIR, "pipeline", "package_country.py")
+    result = subprocess.run(
+        [sys.executable, script, iso3],
+        capture_output=False  # show output directly
+    )
+    if result.returncode != 0:
+        print(f"  ✗ Packaging failed — upload manually with:")
+        print(f"    python pipeline/package_country.py {iso3}")
+        
 
 # ── Step 2: Add PostGIS geometry to geo table ─────────────────────
 def add_geometry(iso3):
@@ -179,6 +196,7 @@ def main():
     add_geometry(iso3)
     load_adm0(iso3)
     publish_geoserver(iso3)
+    package_and_upload(iso3)   # ← add this
 
     print(f"\n{'='*50}")
     print(f"  ✓ {iso3} complete — website will update automatically")

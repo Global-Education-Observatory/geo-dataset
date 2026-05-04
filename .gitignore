@@ -1,3 +1,5 @@
 sources
 cleaning/messy
 .DS_Store
+releases/
+*__pycache__*

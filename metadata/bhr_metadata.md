@@ -19,8 +19,8 @@ dimensions_available:
 
 school_count_total: 211
 school_count_public: 211
-year_range: null
-years_available: []
+year_range: "2016"
+years_available: [2016]
 
 sector_scope: "public"
 sector_notes: "Source dataset includes private schools (n=79), nurseries (n=20), kindergartens (n=113), training institutes (n=101), universities (n=20), and libraries (n=16). All non-public-school records excluded. Retained only SUBTYPE EN values 'PUBLIC SCHOOLS - BOYS' (n=106) and 'PUBLIC SCHOOLS - GIRLS' (n=105)."
@@ -28,13 +28,16 @@ sector_notes: "Source dataset includes private schools (n=79), nurseries (n=20),
 sources:
   - source_id: "bahrain_opengov_edu"
     name: "Educational Institutions — Bahrain Open Data Portal"
-    provider: "Kingdom of Bahrain — Information & eGovernment Authority"
+    provider: "Information & eGovernment Authority (iGA), Kingdom of Bahrain"
     url: "https://www.data.gov.bh/explore/dataset/educational-institutions/table/"
     url_status: "dead"
     access_date: "2022-01-01"
+    data_date: "2016-12-01"
+    update_frequency: "Every 2 years"
+    contact: "gis@cio.gov.bh"
     format: "CSV"
-    language: "English (with Arabic name column)"
-    notes: "URL was live at time of download but has since been taken down. Dataset included geocoordinates, facility type, subtype, and block number for all educational institutions in Bahrain. No version number or publication date was recorded at time of download. Access date is approximate (early 2022)."
+    language: "English and Arabic"
+    notes: "Source data reflects a field survey and the Ministry of Education official website as of December 2016. URL was live at time of download (~2022) but has since been taken down. Update frequency stated as every 2 years — unclear whether subsequent updates were published before URL went dead."
 
 ---
 
@@ -42,7 +45,7 @@ sources:
 
 **Status:** Available  
 **Source(s):** bahrain_opengov_edu  
-**Year of geo data:** Unknown — approximate 2022 based on download date
+**Year of geo data:** 2016 (last update per source metadata: December 2016)
 
 ### Public school subsetting
 Source dataset contains mixed facility types under the category `TYPE EN = 'EDUCATIONAL INSTITUTIONS'`. Public schools identified by filtering `SUBTYPE EN` to `['PUBLIC SCHOOLS - BOYS', 'PUBLIC SCHOOLS - GIRLS']`. This yielded 211 schools (106 boys, 105 girls). All other subtypes excluded:
@@ -98,7 +101,7 @@ No schools had unparseable names. Note that Bahrain's "intermediate" level corre
 ### Known issues
 - `source_id` is the row number from the source CSV (`#` column), not a persistent national MoE school identifier. The source data does not include a Bahrain Ministry of Education school code. `source_id` should not be used for joining to external data without caution.
 - School names contain encoding artifacts in the original source (e.g., `ª` character in some Arabic-transliterated names). These were cleaned during the standardization step.
-- No date is embedded in the source data. The school register may reflect a slightly different point in time than 2022.
+- Data reflects December 2016 per source metadata. Schools opened or closed between 2016 and download date (~2022) will not be reflected.
 
 ---
 
@@ -126,7 +129,7 @@ School-level outcomes data is not publicly available for Bahrain.
 ## GENERAL NOTES
 
 ### Source availability
-The source dataset was downloaded from the Bahrain Open Data Portal approximately early 2022. The URL `https://www.data.gov.bh/explore/dataset/educational-institutions/table/` is no longer accessible as of 2024. The original downloaded CSV is retained in `sources/bhr/` as the only record of the source data.
+The source dataset was downloaded from the Bahrain Open Data Portal approximately December 2016. The URL `https://www.data.gov.bh/explore/dataset/educational-institutions/table/` is no longer accessible as of 2026. The original downloaded CSV is retained in `sources/bhr/` as the only record of the source data.
 
 ### Harmonization decisions
 - Sorted by school name alphabetically before assigning `geo_id` to ensure reproducible ID assignment across re-runs.
