@@ -3,3 +3,5 @@ cleaning/messy
 .DS_Store
 releases/
 *__pycache__*
+data
+geo_paper_draft.docx

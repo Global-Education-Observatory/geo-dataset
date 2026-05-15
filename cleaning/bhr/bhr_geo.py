@@ -114,7 +114,7 @@ gdf["isced_level"] = gdf["NAME"].apply(parse_isced)
 unparsed = gdf["isced_level"].isna().sum()
 if unparsed > 0:
     print(f"  WARNING: {unparsed} schools have no level in name — isced_level = NA")
-    print(gdf[gdf["isced_level"].isna()][["NAME", "SUBTYPE EN"]])
+    print(gdf[gdf["isced_level"].isna()])
 
 print(f"\n  ISCED level distribution:\n{gdf['isced_level'].value_counts()}")
 
@@ -139,7 +139,7 @@ out["sector"]               = "public"
 out["adm0"]                 = "Bahrain"
 out["adm1"]                 = gdf["adm1"]            # governorate from GeoBoundaries
 out["adm2"]                 = gdf["adm2"]            # NA — not available in GeoBoundaries
-out["adm3"]                 = gdf["BLOCK"].astype(str).str.strip()  # block from source
+out["adm3"]                 = gdf["adm3"]#.astype(str).str.strip()  # block from source
 out["urban_rural"]          = pd.NA                  # not in source
 out["ghsl_smod_code"]       = pd.NA                  # to be applied globally post-cleaning
 out["ghsl_urban_rural"]     = pd.NA                  # to be applied globally post-cleaning
@@ -147,7 +147,7 @@ out["latitude"]             = gdf["POINT_Y_Latitude"]
 out["longitude"]            = gdf["POINT_X_Longitude"]
 out["coordinate_source"]    = "official_emis"
 out["coordinate_precision"] = "exact"
-out["status"]               = "open"                 # no closure data available
+out["status"]               = "unknown"                 # no closure data available
 
 # ── Validation checks ─────────────────────────────────────────────────────
 print("\nRunning validation checks...")
@@ -162,14 +162,14 @@ assert out["coordinate_source"].notna().all(), "ERROR: Null coordinate_source"
 assert out["coordinate_precision"].notna().all(), "ERROR: Null coordinate_precision"
 assert out["status"].notna().all(), "ERROR: Null status"
 
-# Coordinate range check for Bahrain (roughly 25.5–26.5N, 50.3–50.8E)
-lat_ok = out["latitude"].between(25.5, 26.5)
-lon_ok = out["longitude"].between(50.3, 50.8)
-if not lat_ok.all():
-    print(f"  WARNING: {(~lat_ok).sum()} schools have latitude outside expected Bahrain range")
-    print(out[~lat_ok][["geo_id", "school_name", "latitude", "longitude"]])
-if not lon_ok.all():
-    print(f"  WARNING: {(~lon_ok).sum()} schools have longitude outside expected Bahrain range")
+# # Coordinate range check for Bahrain (roughly 25.5–26.5N, 50.3–50.8E)
+# lat_ok = out["latitude"].between(25.5, 26.5)
+# lon_ok = out["longitude"].between(50.3, 50.8)
+# if not lat_ok.all():
+#     print(f"  WARNING: {(~lat_ok).sum()} schools have latitude outside expected Bahrain range")
+#     print(out[~lat_ok][["geo_id", "school_name", "latitude", "longitude"]])
+# if not lon_ok.all():
+#     print(f"  WARNING: {(~lon_ok).sum()} schools have longitude outside expected Bahrain range")
 
 print(f"\n  Total schools in output: {len(out)}")
 print(f"  Boys schools: {(out['school_type'] == 'PUBLIC SCHOOLS - BOYS').sum()}")

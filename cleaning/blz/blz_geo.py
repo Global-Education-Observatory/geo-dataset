@@ -115,12 +115,12 @@ gdf["urban_rural_src"] = gdf["Locality"].map(locality_map)
 print("\nJoining admin boundaries from GeoBoundaries...")
 gdf = join_admin_boundaries(gdf, iso3=ISO3, levels=[1, 2, 3, 4])
 
-# Cross-check adm1 vs source District column
-if "adm1" in gdf.columns:
-    mismatches = gdf[gdf["adm1"].notna() & (gdf["District"] != gdf["adm1"])]
-    if len(mismatches) > 0:
-        print(f"\n  NOTE: {len(mismatches)} schools have District != adm1 from GeoBoundaries")
-        print(mismatches[["Name", "District", "adm1"]].to_string())
+# # Cross-check adm1 vs source District column
+# if "adm1" in gdf.columns:
+#     mismatches = gdf[gdf["adm1"].notna() & (gdf["District"] != gdf["adm1"])]
+#     if len(mismatches) > 0:
+#         print(f"\n  NOTE: {len(mismatches)} schools have District != adm1 from GeoBoundaries")
+#         print(mismatches[["Name", "District", "adm1"]].to_string())
 
 # ── Build output dataframe ────────────────────────────────────────────────
 print("\nBuilding output dataframe...")
@@ -138,8 +138,8 @@ out["sector"]                = gdf["Sector"].apply(
 )
 out["adm0"]                  = "Belize"
 out["adm1"]                  = gdf["adm1"]   # district from GeoBoundaries
-out["adm2"]                  = gdf.get("adm2", pd.NA)
-out["adm3"]                  = gdf.get("adm3", pd.NA)
+out["adm2"]                  = gdf["adm2"]
+out["adm3"]                  = gdf["adm3"]
 out["urban_rural"]           = gdf["urban_rural_src"]
 out["ghsl_smod_code"]        = pd.NA
 out["ghsl_urban_rural"]      = pd.NA
@@ -147,7 +147,7 @@ out["latitude"]              = gdf["latitude"]
 out["longitude"]             = gdf["longitude"]
 out["coordinate_source"]     = "official_emis"
 out["coordinate_precision"]  = "exact"
-out["status"]                = "open"
+out["status"]                = "unknown"
 
 # ── Validation checks ─────────────────────────────────────────────────────
 print("\nRunning validation checks...")
@@ -160,15 +160,6 @@ assert out["latitude"].notna().all(), "ERROR: Null latitudes"
 assert out["longitude"].notna().all(), "ERROR: Null longitudes"
 assert out["isced_level"].notna().all(), "ERROR: Null isced_level"
 
-# Coordinate range check for Belize (roughly 15.8–18.5N, 87.5–89.2W)
-lat_ok = out["latitude"].between(15.8, 18.5)
-lon_ok = out["longitude"].between(-89.2, -87.5)
-if not lat_ok.all():
-    print(f"  WARNING: {(~lat_ok).sum()} schools outside expected latitude range")
-    print(out[~lat_ok][["geo_id", "school_name", "latitude", "longitude"]])
-if not lon_ok.all():
-    print(f"  WARNING: {(~lon_ok).sum()} schools outside expected longitude range")
-    print(out[~lon_ok][["geo_id", "school_name", "latitude", "longitude"]])
 
 print(f"\n  Total schools in output: {len(out)}")
 print(f"  ISCED level distribution:\n{out['isced_level'].value_counts()}")

@@ -8,7 +8,7 @@ country: "Bahrain"
 iso3: "BHR"
 iso2: "BH"
 region: "Western Asia"
-last_updated: "2026-05-04"
+last_updated: "2026-05-14"
 prepared_by: "HB"
 
 dimensions_available:
@@ -33,11 +33,11 @@ sources:
     url_status: "dead"
     access_date: "2022-01-01"
     data_date: "2016-12-01"
-    update_frequency: "Every 2 years"
-    contact: "gis@cio.gov.bh"
+    update_frequency: "Unknown"
+    contact: "Unknown"
     format: "CSV"
     language: "English and Arabic"
-    notes: "Source data reflects a field survey and the Ministry of Education official website as of December 2016. URL was live at time of download (~2022) but has since been taken down. Update frequency stated as every 2 years — unclear whether subsequent updates were published before URL went dead."
+    notes: "Source data reflects a field survey and the Ministry of Education official website as of December 2016. URL was live at time of download (~2022) but has since been taken down. Unclear whether subsequent updates were published before URL went dead."
 
 ---
 
@@ -58,10 +58,10 @@ Source dataset contains mixed facility types under the category `TYPE EN = 'EDUC
 - LIBRARIES (n=16): non-school facilities
 
 ### Coordinate construction
-Coordinates taken directly from source columns `POINT_X_Longitude` and `POINT_Y_Latitude` → `coordinate_source = 'official_emis'`, `coordinate_precision = 'exact'` for all 211 schools. All coordinates passed bounding box validation for Bahrain (25.5–26.5°N, 50.3–50.8°E). No coordinates required fallback treatment.
+Coordinates taken directly from source columns `POINT_X_Longitude` and `POINT_Y_Latitude` → `coordinate_source = 'official_emis'`, `coordinate_precision = 'exact'` for all 211 schools.
 
 ### Coordinate precision notes
-No precision flags present in the source data. Visual inspection not performed but coordinates from Bahrain's open government data portal are generally GPS-collected as part of official facility mapping. No schools fell outside the expected Bahrain bounding box.
+No precision flags present in the source data. Visual inspection not performed but, no schools fell outside the expected Bahrain bounding box.
 
 ### Administrative hierarchy
 `adm0` = "Bahrain" (hardcoded).
@@ -77,7 +77,7 @@ No precision flags present in the source data. Visual inspection not performed b
 
 `adm2` set to NA — GeoBoundaries does not provide ADM2 boundaries for Bahrain.
 
-`adm3` taken from source `BLOCK` column (numeric block codes). Retained as string. Bahrain uses a block-based addressing system where blocks are the smallest administrative unit used for addressing and property registration.
+`adm3` set to NA — GeoBoundaries does not provide ADM3 boundaries for Bahrain.
 
 ### ISCED level
 ISCED level parsed from school name text rather than assigned from a schema field, as the source data does not include a level column. Parsing logic:
@@ -96,10 +96,10 @@ Results:
 | 3 (Secondary) | 34 |
 | 1\|2 (Primary & Intermediate) | 21 |
 
-No schools had unparseable names. Note that Bahrain's "intermediate" level corresponds to Grades 7–9 (lower secondary, ISCED 2), and "secondary" to Grades 10–12 (upper secondary, ISCED 3).
+4 schools had unparseable names. 3 are Religious Institutes with no level infomration and the fourth is a Technology Insittute. All 4 are labled as 'PUBLIC SCHOOLS - BOYS'
 
 ### Known issues
-- `source_id` is the row number from the source CSV (`#` column), not a persistent national MoE school identifier. The source data does not include a Bahrain Ministry of Education school code. `source_id` should not be used for joining to external data without caution.
+- `source_id` is the row number from the source CSV (`#` column), not necessarily a persistent national MoE school identifier. The source data does not clearly include a Bahrain Ministry of Education school code. Use caution when using `source_id` for joining to external data.
 - School names contain encoding artifacts in the original source (e.g., `ª` character in some Arabic-transliterated names). These were cleaned during the standardization step.
 - Data reflects December 2016 per source metadata. Schools opened or closed between 2016 and download date (~2022) will not be reflected.
 
@@ -129,20 +129,17 @@ School-level outcomes data is not publicly available for Bahrain.
 ## GENERAL NOTES
 
 ### Source availability
-The source dataset was downloaded from the Bahrain Open Data Portal approximately December 2016. The URL `https://www.data.gov.bh/explore/dataset/educational-institutions/table/` is no longer accessible as of 2026. The original downloaded CSV is retained in `sources/bhr/` as the only record of the source data.
+The source dataset was downloaded from the Bahrain Open Data Portal in 2022. The URL `https://www.data.gov.bh/explore/dataset/educational-institutions/table/` is no longer accessible as of 2026. The original downloaded CSV is retained in `sources/bhr/` as the only record of the source data.
 
 ### Harmonization decisions
 - Sorted by school name alphabetically before assigning `geo_id` to ensure reproducible ID assignment across re-runs.
-- `school_name_romanized` set to NA — all school names in the source are already in English (romanized transliteration from Arabic).
-- `NAME ARABIC` column from source not retained in output — not part of the canonical schema. Available in the original source file if needed.
-- `status = 'open'` assigned to all schools — no closure data available in source.
-- `urban_rural` set to NA — not in source and GHSL classification pending global application.
+- `status = 'unknown'` assigned to all schools — no closure data available in source.
 
 ### Outstanding issues
 - No persistent national school ID available — `source_id` is a row number only. If a Bahrain MoE school code is identified in a future data request, this field should be updated.
-- `adm2` is NA for all schools due to GeoBoundaries coverage gap. If municipality-level boundaries become available (e.g., from Bahrain's official GIS portal), adm2 could be populated via spatial join.
+- `adm2` is NA for all schools due to limated data coverage in gB. If municipality-level boundaries become available (e.g., from Bahrain's official GIS portal), adm2 could be populated via spatial join.
 - Access date for source data is approximate. Exact download date should be updated if recoverable from file metadata.
-- GHSL-SMOD classification (`ghsl_smod_code`, `ghsl_urban_rural`) not yet applied — pending global raster sampling step.
 
 ### Change log
 2026-05-04 — Initial file created
+2026-05-14 - Through data validation done

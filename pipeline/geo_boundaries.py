@@ -86,6 +86,7 @@ def join_admin_boundaries(
     gdf = gdf.copy()
 
     for level in levels:
+
         col = f"adm{level}"
         print(f"  ADM{level}: fetching from GeoBoundaries...", end=" ")
 
@@ -97,11 +98,11 @@ def join_admin_boundaries(
             continue
 
         # Find the name column — fall back to first non-geometry column
-        if name_col in boundary.columns:
-            use_col = name_col
-        else:
-            candidates = [c for c in boundary.columns if "name" in c.lower()]
-            use_col = candidates[0] if candidates else boundary.columns[0]
+        # if name_col in boundary.columns:
+        use_col = name_col
+        # else:
+        #     candidates = [c for c in boundary.columns if "name" in c.lower()]
+        #     use_col = candidates[0] if candidates else boundary.columns[0]
 
         n_features = len(boundary)
 

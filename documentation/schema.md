@@ -122,9 +122,8 @@ One row per school × year · Captures physical infrastructure inputs.
 | `electricity` | Integer | Yes | NA if not collected | School has access to electricity from any source (grid, solar, generator). Binary: 1 = yes, 0 = no. | UIS / SE4All |
 | `internet` | Integer | No | NA if not collected | School has internet connectivity of any type. Binary: 1 = yes, 0 = no. | UNICEF Giga / ITU |
 | `internet_type` | String | No | NA if not collected or internet = 0 | Type of internet connection. Allowed values: `fiber`, `cable_modem`, `dsl`, `mobile_3g`, `mobile_4g`, `mobile_5g`, `satellite`, `other`. | ITU / UNICEF Giga |
-| `computer_lab` | Integer | No | NA if not collected | School has a functioning computer laboratory. Binary: 1 = yes, 0 = no. | UIS ICT indicator |
+| `computers` | Integer | No | NA if not collected | School has computers available for instructional use. Binary: 1 = yes, 0 = no. |  |
 | `library` | Integer | No | NA if not collected | School has a library or reading room with books available. Binary: 1 = yes, 0 = no. | IIEP EMIS standard |
-| `permanent_building` | Integer | No | NA if not collected | School has at least one permanent (non-temporary) instructional building. Binary: 1 = yes, 0 = no. | IIEP EMIS / GPE |
 
 ---
 

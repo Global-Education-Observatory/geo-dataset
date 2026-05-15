@@ -1,308 +1,308 @@
 geo_id,source_id,country,school_name,school_name_romanized,isced_level,school_type,sector,adm0,adm1,adm2,adm3,urban_rural,ghsl_smod_code,ghsl_urban_rural,latitude,longitude,coordinate_source,coordinate_precision,status
-BLZ_000001,S50102,BLZ,Agriculture and Natural Resource Institute - ANRI,,2|3,Secondary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.977876,-88.353042,official_emis,exact,open
-BLZ_000002,P61101,BLZ,Aguacate RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.161555,-89.091994,official_emis,exact,open
-BLZ_000003,P12001,BLZ,All Saints Anglican Primary School,,1,Primary,public,Belize,Belize,Freetown,,urban,,,17.50660556,-88.19344599,official_emis,exact,open
-BLZ_000004,S29101,BLZ,Alvin L. Young Nazarene High,,2|3,Secondary,public,Belize,Cayo,Cayo West,,rural,,,17.077725,-89.1235953,official_emis,exact,open
-BLZ_000005,S12001,BLZ,Anglican Cathedral College,,2|3,Secondary,public,Belize,Belize,Albert,,urban,,,17.4891354,-88.1877227,official_emis,exact,open
-BLZ_000006,P20401,BLZ,Armenia Government Primary School,,1,Primary,public,Belize,Cayo,Cayo South,,rural,,,17.15552726,-88.74495422,official_emis,exact,open
-BLZ_000007,P29002,BLZ,Arms of Love Primary,,1,Primary,public,Belize,Cayo,Cayo North,,urban,,,17.14421006,-89.07819206,official_emis,exact,open
-BLZ_000008,P41401,BLZ,August Pine Ridge RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,,,17.9731652,-88.7267839,official_emis,exact,open
-BLZ_000009,S34101,BLZ,Belize Adventist College,,2|3,Secondary,public,Belize,Corozal,Corozal North,,rural,,,18.36517,-88.43607,official_emis,exact,open
-BLZ_000010,S40101,BLZ,Belize High School of Agriculture,,2|3,Secondary,public,Belize,Orange Walk,Orange Walk South,,rural,,,18.0305483,-88.6730195,official_emis,exact,open
-BLZ_000011,S10101,BLZ,Belize Rural High School,,2|3,Secondary,public,Belize,Belize,Belize Rural North,,rural,,,17.5517134,-88.5557391,official_emis,exact,open
-BLZ_000012,P10302,BLZ,Belize Rural Primary School,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.5531873,-88.5554351,official_emis,exact,open
-BLZ_000013,S60103,BLZ,Bella Vista Government Secondary School,,2|3,Secondary,public,Belize,Toledo,Toledo East,,rural,,,16.50363212,-88.51737314,official_emis,exact,open
-BLZ_000014,S28001,BLZ,Belmopan Baptist High School,,2|3,Secondary,public,Belize,Cayo,Cayo South,,rural,,,17.2700661,-88.78877827,official_emis,exact,open
-BLZ_000015,S20001,BLZ,Belmopan Comprehensive School,,2|3,Secondary,public,Belize,Cayo,Belmopan,,urban,,,17.245532,-88.7689387,official_emis,exact,open
-BLZ_000016,S23001,BLZ,Belmopan Methodist High School,,2|3,Secondary,public,Belize,Cayo,Belmopan,,urban,,,17.2473976,-88.7624841,official_emis,exact,open
-BLZ_000017,P64001,BLZ,Bethel SDA Primary,,1,Primary,public,Belize,Toledo,Toledo East,,urban,,,16.10509,-88.820455,official_emis,exact,open
-BLZ_000018,P61401,BLZ,Big Falls RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.25809102,-88.8835809,official_emis,exact,open
-BLZ_000019,P24450,BLZ,Billy White SDA Primary,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,,,17.21390186,-89.04963713,official_emis,exact,open
-BLZ_000020,P10401,BLZ,Biscayne Government Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.7133172,-88.4524974,official_emis,exact,open
-BLZ_000021,S41002,BLZ,Bishop Martin High School,,2|3,Secondary,public,Belize,Orange Walk,Orange Walk North,,urban,,,18.0980072,-88.5739059,official_emis,exact,open
-BLZ_000022,P21009,BLZ,Bishop O.P. Martin RC Primary,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,,,17.1592719,-89.0835264,official_emis,exact,open
-BLZ_000023,P61201,BLZ,Blue Creek RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.19895121,-89.04589857,official_emis,exact,open
-BLZ_000024,P20201,BLZ,Buena Vista Government Primary,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,,,17.2500862,-88.9424006,official_emis,exact,open
-BLZ_000025,P31402,BLZ,Buena Vista RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,,,18.23425545,-88.52545564,official_emis,exact,open
-BLZ_000026,P24401,BLZ,Bullet Tree SDA Primary,,1,Primary,public,Belize,Cayo,Cayo North,,rural,,,17.16714223,-89.11225311,official_emis,exact,open
-BLZ_000027,P13401,BLZ,Burrell Boom Methodist Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.568794,-88.4034022,official_emis,exact,open
-BLZ_000028,P15001,BLZ,Buttonwood Bay Nazarene Primary School,,1,Primary,public,Belize,Belize,Caribbean Shores,,urban,,,17.5119826,-88.210357,official_emis,exact,open
-BLZ_000029,P30401,BLZ,Calcutta Government Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,,,18.36313497,-88.43205515,official_emis,exact,open
-BLZ_000030,P34401,BLZ,Calcutta SDA Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,,,18.36272172,-88.43864066,official_emis,exact,open
-BLZ_000031,P31403,BLZ,Caledonia RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,,,18.2295071,-88.4739961,official_emis,exact,open
-BLZ_000032,P19002,BLZ,Calvary Temple Primary School,,1,Primary,public,Belize,Belize,Albert,,urban,,,17.49719353,-88.18978581,official_emis,exact,open
-BLZ_000033,S14001,BLZ,Canaan SDA High School,,2|3,Secondary,public,Belize,Belize,Caribbean Shores,,urban,,,17.5116047,-88.2094435,official_emis,exact,open
-BLZ_000034,P40401,BLZ,Carmelita Government Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk East,,rural,,,18.0136924,-88.5432047,official_emis,exact,open
-BLZ_000035,P11201,BLZ,Caye Caulker RC Primary,,1,Primary,public,Belize,,Belize Rural North,,rural,,,17.7387978,-88.02636401,official_emis,exact,open
-BLZ_000036,P16001,BLZ,Central Christian Primary,,1,Primary,public,Belize,Belize,Pickstock,,urban,,,17.50385702,-88.19453372,official_emis,exact,open
-BLZ_000037,P30402,BLZ,Chan Chen Government Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,,,18.44027843,-88.42791132,official_emis,exact,open
-BLZ_000038,P40402,BLZ,Chan Pine Ridge Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk East,,rural,,,18.03451029,-88.58306788,official_emis,exact,open
-BLZ_000039,P49001,BLZ,Chapel Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk Central,,urban,,,18.08663569,-88.561185,official_emis,exact,open
-BLZ_000040,P52001,BLZ,Christ the King Anglican Primary,,1,Primary,public,Belize,,Dangriga,,urban,,,16.971345,-88.2205947,official_emis,exact,open
-BLZ_000041,P34001,BLZ,Christiline Gill SDA Primary School,,1,Primary,public,Belize,Corozal,Corozal Bay,,urban,,,18.3961924,-88.3928434,official_emis,exact,open
-BLZ_000042,P31102,BLZ,Chunox RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,,,18.293324,-88.3585596,official_emis,exact,open
-BLZ_000043,P34101,BLZ,Chunox SDA Primary School,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,,,18.2931429,-88.3549183,official_emis,exact,open
-BLZ_000044,S30102,BLZ,Chunox Saint Viator Vocational High School,,2|3,Secondary,public,Belize,Corozal,Corozal South East,,rural,,,18.3046976,-88.3299479,official_emis,exact,open
-BLZ_000045,P49402,BLZ,Compassion UECB Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,,,18.09183031,-88.64028513,official_emis,exact,open
-BLZ_000046,P39402,BLZ,Concepcion Presbyterian Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,,,18.32252938,-88.46676247,official_emis,exact,open
-BLZ_000047,P31404,BLZ,Concepcion RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,,,18.32397393,-88.46698687,official_emis,exact,open
-BLZ_000048,P31101,BLZ,Copper Bank RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,,,18.3200791,-88.3564069,official_emis,exact,open
-BLZ_000049,P61104,BLZ,Corazon Creek RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.053486,-89.122435,official_emis,exact,open
-BLZ_000050,S60102,BLZ,Corazon Creek Technical High,,2|3,Secondary,public,Belize,Toledo,Toledo West,,rural,,,16.053391,-89.119719,official_emis,exact,open
-BLZ_000051,S37101,BLZ,Cornerstone Presbyterian High School,,2|3,Secondary,public,Belize,Corozal,Corozal North,,rural,,,18.320742,-88.4913423,official_emis,exact,open
-BLZ_000052,P39001,BLZ,Corozal Church of Christ Primary School,,1,Primary,public,Belize,Corozal,Corozal Bay,,urban,,,18.3921435,-88.3977439,official_emis,exact,open
-BLZ_000053,S39001,BLZ,Corozal Community College,,2|3,Secondary,public,Belize,Corozal,Corozal North,,urban,,,18.394154,-88.4057988,official_emis,exact,open
-BLZ_000054,P33001,BLZ,Corozal Methodist Primary School,,1,Primary,public,Belize,Corozal,Corozal Bay,,urban,,,18.3914223,-88.3846929,official_emis,exact,open
-BLZ_000055,P35001,BLZ,Corozal Nazarene Primary School,,1,Primary,public,Belize,Corozal,Corozal Bay,,urban,,,18.3901086,-88.3893545,official_emis,exact,open
-BLZ_000056,P60102,BLZ,Crique Jute Government Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.272375,-89.016066,official_emis,exact,open
-BLZ_000057,P31405,BLZ,Cristo Rey RC Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,,,18.34813114,-88.49621509,official_emis,exact,open
-BLZ_000058,P21201,BLZ,Cristo Rey RC Primary School-CYO,,1,Primary,public,Belize,Cayo,Cayo North,,rural,,,17.13238108,-89.05491947,official_emis,exact,open
-BLZ_000059,P10301,BLZ,Crooked Tree Government Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.77630954,-88.53620898,official_emis,exact,open
-BLZ_000060,S51002,BLZ,Delille Academy High,,2|3,Secondary,public,Belize,Stann Creek,Dangriga,,urban,,,16.9666388,-88.23269916,official_emis,exact,open
-BLZ_000061,P13002,BLZ,Ebenezer Methodist Primary School,,1,Primary,public,Belize,Belize,Fort George,,urban,,,17.50070994,-88.18624379,official_emis,exact,open
-BLZ_000062,S24001,BLZ,Eden SDA High School,,2|3,Secondary,public,Belize,Cayo,Cayo Central,,urban,,,17.1652635,-89.0533178,official_emis,exact,open
-BLZ_000063,P24001,BLZ,Eden SDA Primary,,1,Primary,public,Belize,Cayo,Cayo Central,,urban,,,17.163534,-89.054542,official_emis,exact,open
-BLZ_000064,S10001,BLZ,Edward P. Yorke High School,,2|3,Secondary,public,Belize,Belize,Caribbean Shores,,urban,,,17.508747,-88.1995511,official_emis,exact,open
-BLZ_000065,P20104,BLZ,El Progresso Community Primary School,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,,,17.10021099,-88.95346121,official_emis,exact,open
-BLZ_000066,P24002,BLZ,El Shaddai SDA Primary,,1,Primary,public,Belize,Cayo,Belmopan,,urban,,,17.25770303,-88.76700135,official_emis,exact,open
-BLZ_000067,P14002,BLZ,Ephesus SDA Primary,,1,Primary,public,Belize,Belize,Caribbean Shores,,urban,,,17.5028534,-88.1899488,official_emis,exact,open
-BLZ_000068,P53001,BLZ,Epworth Methodist Primary,,1,Primary,public,Belize,,Dangriga,,urban,,,16.96934443,-88.22204658,official_emis,exact,open
-BLZ_000069,S30101,BLZ,Escuela Secundaria Tecnica Mexico,,2|3,Secondary,public,Belize,Corozal,Corozal South West,,rural,,,18.3038216,-88.5097694,official_emis,exact,open
-BLZ_000070,S10005,BLZ,Excelsior High School,,2|3,Secondary,public,Belize,Belize,Queen Square,,urban,,,17.48807239,-88.19932073,official_emis,exact,open
-BLZ_000071,P61407,BLZ,Fabian Cayetano RC Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,16.47377481,-88.62242232,official_emis,exact,open
-BLZ_000072,P25002,BLZ,Faith Nazarene Primary,,1,Primary,public,Belize,Cayo,Cayo North East,,urban,,,17.1593016,-89.0718259,official_emis,exact,open
-BLZ_000073,P41005,BLZ,Fel Briceno Academy Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,urban,,,18.09972918,-88.57711709,official_emis,exact,open
-BLZ_000074,P40104,BLZ,Fire Burn Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk East,,rural,,,17.971149,-88.388234,official_emis,exact,open
-BLZ_000075,P31499,BLZ,Fire Burn RC Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,,,18.387728,-88.430817,official_emis,exact,open
-BLZ_000076,P63401,BLZ,Forest Home Methodist Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,16.13512765,-88.82907736,official_emis,exact,open
-BLZ_000077,P20301,BLZ,Frank's Eddy Government Primary,,1,Primary,public,Belize,Cayo,Cayo South,,rural,,,17.25571545,-88.63460039,official_emis,exact,open
-BLZ_000078,P10101,BLZ,Gales Point Government Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.1759659,-88.33069856,official_emis,exact,open
-BLZ_000079,P20003,BLZ,Garden City Primary,,1,Primary,public,Belize,Cayo,Belmopan,,urban,,,17.24135329,-88.76885633,official_emis,exact,open
-BLZ_000080,S50301,BLZ,Georgetown Technical High School,,2|3,Secondary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.64068446,-88.49238052,official_emis,exact,open
-BLZ_000081,P60104,BLZ,Golden Stream Government Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.35095604,-88.79922442,official_emis,exact,open
-BLZ_000082,P19003,BLZ,Grace Primary,,1,Primary,public,Belize,Belize,Mesopotamia,,urban,,,17.49431009,-88.19180459,official_emis,exact,open
-BLZ_000083,P60106,BLZ,Graham Creek Government Primary School,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,15.93168,-89.12791,official_emis,exact,open
-BLZ_000084,P11402,BLZ,Guadalupe RC Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.6283615,-88.3689477,official_emis,exact,open
-BLZ_000085,P49403,BLZ,Guinea Grass Pentecostal Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,,,17.96526293,-88.59758867,official_emis,exact,open
-BLZ_000086,P41402,BLZ,Guinea Grass Roman Catholic Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,,,17.96684204,-88.59735397,official_emis,exact,open
-BLZ_000087,P50001,BLZ,Gulisi Community Primary,,1,Primary,public,Belize,Stann Creek,Dangriga,,urban,,,16.96199367,-88.24126268,official_emis,exact,open
-BLZ_000088,S10002,BLZ,Gwen Lizarraga High School,,2|3,Secondary,public,Belize,Belize,Collet,,urban,,,17.4944598,-88.2001554,official_emis,exact,open
-BLZ_000089,P10402,BLZ,Hattieville Government Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.4485986,-88.3934689,official_emis,exact,open
-BLZ_000090,P14450,BLZ,Hattieville SDA Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.462312,-88.392619,official_emis,exact,open
-BLZ_000091,P20105,BLZ,Hidden Paradise Government Primary,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,,,17.26126489,-89.03432585,official_emis,exact,open
-BLZ_000092,P24003,BLZ,Hills of Promise Primary,,1,Primary,public,Belize,Cayo,Cayo West,,urban,,,17.07513652,-89.133134,official_emis,exact,open
-BLZ_000093,P51401,BLZ,Holy Angels RC Primary,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.99309444,-88.37536845,official_emis,exact,open
-BLZ_000094,P12009,BLZ,Holy Cross Anglican Primary School,,1,Primary,public,Belize,Belize,Belize Rural North,,urban,,,17.93204994,-87.95800778,official_emis,exact,open
-BLZ_000095,P21102,BLZ,Holy Cross RC Primary,,1,Primary,public,Belize,Cayo,Cayo West,,rural,,,17.12512502,-89.13376266,official_emis,exact,open
-BLZ_000096,P51303,BLZ,Holy Family RC Primary,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.858705,-88.28384546,official_emis,exact,open
-BLZ_000097,P51002,BLZ,Holy Ghost RC Primary,,1,Primary,public,Belize,Stann Creek,Dangriga,,urban,,,16.95834961,-88.22036542,official_emis,exact,open
-BLZ_000098,P11001,BLZ,Holy Redeemer RC Primary,,1,Primary,public,Belize,Belize,Albert,,urban,,,17.49672389,-88.18728754,official_emis,exact,open
-BLZ_000099,P53401,BLZ,Hope Creek Methodist Primary,,1,Primary,public,Belize,Stann Creek,Dangriga,,rural,,,17.0027292,-88.3134707,official_emis,exact,open
-BLZ_000100,P25001,BLZ,Howard Smith Nazarene Primary,,1,Primary,public,Belize,Cayo,Cayo West,,urban,,,17.073336,-89.1337927,official_emis,exact,open
-BLZ_000101,P20101,BLZ,Iguana Creek Government Primary,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,,,17.29344996,-88.98886432,official_emis,exact,open
-BLZ_000102,P21401,BLZ,Immaculate Conception RC Primary,,1,Primary,public,Belize,Cayo,Cayo North,,rural,,,17.17028661,-89.1118166,official_emis,exact,open
-BLZ_000103,S50101,BLZ,Independence High School,,2|3,Secondary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.53673198,-88.42424198,official_emis,exact,open
-BLZ_000104,P50103,BLZ,Independence Primary,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.53484501,-88.41500479,official_emis,exact,open
-BLZ_000105,P40101,BLZ,Indian Church Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,,,17.75312214,-88.65842716,official_emis,exact,open
-BLZ_000106,P61202,BLZ,Indian Creek RC Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,16.312807,-88.832219,official_emis,exact,open
-BLZ_000107,S10006,BLZ,Itz’at STEAM Academy,,2|3,Secondary,public,Belize,Belize,Freetown,,urban,,,17.5043772,-88.1924081,official_emis,exact,open
-BLZ_000108,P61107,BLZ,Jalacte RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.203971,-89.202056,official_emis,exact,open
-BLZ_000109,P14001,BLZ,James Garbutt SDA Primary,,1,Primary,public,Belize,Belize,Albert,,urban,,,17.4892637,-88.1886479,official_emis,exact,open
-BLZ_000110,S60101,BLZ,Julian Cho Technical High School,,2|3,Secondary,public,Belize,Toledo,Toledo West,,rural,,,16.228385,-88.935773,official_emis,exact,open
-BLZ_000111,S17101,BLZ,King's College,,2|3,Secondary,public,Belize,Belize,Belize Rural North,,rural,,,17.791775,-88.311766,official_emis,exact,open
-BLZ_000112,P20004,BLZ,Kuxlin Ha Government Primary,,1,Primary,public,Belize,Cayo,Belmopan,,urban,,,17.24511902,-88.75091571,official_emis,exact,open
-BLZ_000113,P20404,BLZ,La Gracia Government Primary,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,,,17.3538976,-88.93366512,official_emis,exact,open
-BLZ_000114,P41003,BLZ,La Inmaculada RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk Central,,urban,,,18.07972456,-88.55877801,official_emis,exact,open
-BLZ_000115,P21101,BLZ,La Inmaculada RC Primary-CYO,,1,Primary,public,Belize,Cayo,Cayo West,,rural,,,17.02302,-89.14862,official_emis,exact,open
-BLZ_000116,P19401,BLZ,Ladyville Evangelical Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.5560136,-88.3101871,official_emis,exact,open
-BLZ_000117,P14451,BLZ,Ladyville SDA Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.5512126,-88.2956856,official_emis,exact,open
-BLZ_000118,S10102,BLZ,Ladyville Technical High School,,2|3,Secondary,public,Belize,Belize,Belize Rural North,,rural,,,17.5494496,-88.3060509,official_emis,exact,open
-BLZ_000119,P60201,BLZ,Laguna Government Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.166292,-88.938926,official_emis,exact,open
-BLZ_000120,P33401,BLZ,Libertad Methodist Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,,,18.30502436,-88.45572296,official_emis,exact,open
-BLZ_000121,P31406,BLZ,Libertad RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,,,18.30565,-88.4548,official_emis,exact,open
-BLZ_000122,P34402,BLZ,Libertad SDA Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,,,18.30507008,-88.4546444,official_emis,exact,open
-BLZ_000123,P59401,BLZ,Light of the Valley Baptist Primary,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,17.0026135,-88.4501321,official_emis,exact,open
-BLZ_000124,P61403,BLZ,Little Flower RC Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,16.135152,-88.822948,official_emis,exact,open
-BLZ_000125,P60401,BLZ,Living Word Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,16.076112,-88.910636,official_emis,exact,open
-BLZ_000126,P20102,BLZ,Los Tambos Government Primary,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,,,17.3273833,-89.0089457,official_emis,exact,open
-BLZ_000127,P40001,BLZ,Louisiana Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk East,,urban,,,18.0729626,-88.56283762,official_emis,exact,open
-BLZ_000128,P31407,BLZ,Louisville RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,,,18.31995322,-88.50963896,official_emis,exact,open
-BLZ_000129,P10201,BLZ,Lucky Strike Government Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.78191457,-88.32019553,official_emis,exact,open
-BLZ_000130,P60205,BLZ,Mabil Ha Government Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.101889,-89.088083,official_emis,exact,open
-BLZ_000131,P61109,BLZ,Machakilha RC Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,15.941495,-89.190573,official_emis,exact,open
-BLZ_000132,P63402,BLZ,Mafredi Methodist Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.24439481,-88.99248725,official_emis,exact,open
-BLZ_000133,P31003,BLZ,Mary Hill RC Primary School,,1,Primary,public,Belize,Corozal,Corozal Bay,,urban,,,18.3894977,-88.4021072,official_emis,exact,open
-BLZ_000134,S10003,BLZ,Maud Williams High School,,2|3,Secondary,public,Belize,Belize,Mesopotamia,,urban,,,17.49192952,-88.19454973,official_emis,exact,open
-BLZ_000135,P50301,BLZ,Maya Mopan Government Primary,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.6609704,-88.5208443,official_emis,exact,open
-BLZ_000136,P60203,BLZ,Medina Bank Government Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.442099,-88.74388,official_emis,exact,open
-BLZ_000137,P60103,BLZ,Midway Government Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,16.0617295,-88.955322,official_emis,exact,open
-BLZ_000138,S20002,BLZ,Mopan Technical High School,,2|3,Secondary,public,Belize,Cayo,Cayo West,,urban,,,17.0760484,-89.1287156,official_emis,exact,open
-BLZ_000139,P20103,BLZ,More Tomorrow Government Primary,,1,Primary,public,Belize,Cayo,Cayo South,,rural,,,17.34869,-88.69517,official_emis,exact,open
-BLZ_000140,P21002,BLZ,Mount Carmel Primary,,1,Primary,public,Belize,Cayo,Cayo West,,urban,,,17.0739982,-89.13788282,official_emis,exact,open
-BLZ_000141,S41001,BLZ,Muffles College,,2|3,Secondary,public,Belize,Orange Walk,Orange Walk Central,,rural,,,18.0860243,-88.5619272,official_emis,exact,open
-BLZ_000142,P19004,BLZ,Muslim Community Primary,,1,Primary,public,Belize,Belize,Port Loyola,,urban,,,17.48878,-88.200574,official_emis,exact,open
-BLZ_000143,P60101,BLZ,Na Luum Ca Government Primary School,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.286352,-89.080682,official_emis,exact,open
-BLZ_000144,S15001,BLZ,Nazarene High School,,2|3,Secondary,public,Belize,Belize,Caribbean Shores,,urban,,,17.507925,-88.1981201,official_emis,exact,open
-BLZ_000145,S47001,BLZ,New Hope High School,,2|3,Secondary,public,Belize,Orange Walk,Orange Walk North,,urban,,,18.08423719,-88.57558464,official_emis,exact,open
-BLZ_000146,P14003,BLZ,New Horizon SDA Primary School,,1,Primary,public,Belize,Belize,Belize Rural North,,urban,,,17.903028,-87.978804,official_emis,exact,open
-BLZ_000147,P20106,BLZ,New Life Government Primary-CYO,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,,,17.2195085,-89.0195925,official_emis,exact,open
-BLZ_000148,P49003,BLZ,New Life Presbyterian Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,urban,,,18.0928431,-88.5626669,official_emis,exact,open
-BLZ_000149,P41403,BLZ,Nuevo San Juan RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,,,18.226415,-88.578292,official_emis,exact,open
-BLZ_000150,S17003,BLZ,Ocean Academy High School,,2|3,Secondary,public,Belize,,Belize Rural North,,rural,,,17.7366771,-88.029892,official_emis,exact,open
-BLZ_000151,P29401,BLZ,Ontario Christian Primary,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,,,17.2265739,-88.8899186,official_emis,exact,open
-BLZ_000152,S40001,BLZ,Orange Walk Technical High School,,2|3,Secondary,public,Belize,Orange Walk,Orange Walk North,,urban,,,18.0855768,-88.5726507,official_emis,exact,open
-BLZ_000153,P61301,BLZ,Our Lady of Bella Vista RC Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,16.5093409,-88.5340734,official_emis,exact,open
-BLZ_000154,P41201,BLZ,Our Lady of Fatima RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk Central,,urban,,,18.08223,-88.567239,official_emis,exact,open
-BLZ_000155,P21405,BLZ,Our Lady of Fatima RC Primary-CYO,,1,Primary,public,Belize,Cayo,Cayo South,,rural,,,17.2595782,-88.7922639,official_emis,exact,open
-BLZ_000156,S21004,BLZ,Our Lady of Guadalupe RC High School,,2|3,Secondary,public,Belize,Cayo,Belmopan,,urban,,,17.26747375,-88.76513798,official_emis,exact,open
-BLZ_000157,P31401,BLZ,Our Lady of Guadalupe RC Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,,,18.4021551,-88.3834572,official_emis,exact,open
-BLZ_000158,P21008,BLZ,Our Lady of Guadalupe RC Primary-CYO,,1,Primary,public,Belize,Cayo,Belmopan,,urban,,,17.24926728,-88.76365421,official_emis,exact,open
-BLZ_000159,P11202,BLZ,Our Lady of Lourdes RC Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.881997,-88.313076,official_emis,exact,open
-BLZ_000160,P61106,BLZ,Our Lady of Sorrows R.C Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,15.98958548,-89.21158215,official_emis,exact,open
-BLZ_000161,P11403,BLZ,Our Lady of the Way Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.548532,-88.297967,official_emis,exact,open
-BLZ_000162,S21002,BLZ,Our lady of Mount Carmel High School,,2|3,Secondary,public,Belize,Cayo,Cayo West,,urban,,,17.0724036,-89.13514763,official_emis,exact,open
-BLZ_000163,S11001,BLZ,Pallotti High School,,2|3,Secondary,public,Belize,Belize,Caribbean Shores,,urban,,,17.5050251,-88.1971102,official_emis,exact,open
-BLZ_000164,P19402,BLZ,Pancotto Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.6308428,-88.3686216,official_emis,exact,open
-BLZ_000165,P30403,BLZ,Paraiso Government Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,,,18.40985129,-88.39463336,official_emis,exact,open
-BLZ_000166,P31408,BLZ,Patchakan RC Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,,,18.40201008,-88.47301758,official_emis,exact,open
-BLZ_000167,P39450,BLZ,Presbyterian Day Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,,,18.34980796,-88.49613895,official_emis,exact,open
-BLZ_000168,P31103,BLZ,Progresso RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,,,18.23599445,-88.40945715,official_emis,exact,open
-BLZ_000169,P34403,BLZ,Progresso Zills SDA Primary,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,,,18.23560771,-88.40501605,official_emis,exact,open
-BLZ_000170,S64101,BLZ,Providence SDA High School,,2|3,Secondary,public,Belize,Toledo,Toledo West,,rural,,,16.248588,-89.016305,official_emis,exact,open
-BLZ_000171,P63001,BLZ,Punta Gorda Methodist Primary,,1,Primary,public,Belize,,Toledo East,,urban,,,16.101592,-88.801299,official_emis,exact,open
-BLZ_000172,P12004,BLZ,Queen Square Anglican Primary,,1,Primary,public,Belize,Belize,Mesopotamia,,urban,,,17.49048,-88.1944353,official_emis,exact,open
-BLZ_000173,P19005,BLZ,Queen Street Baptist Primary School,,1,Primary,public,Belize,Belize,Fort George,,urban,,,17.497816,-88.183864,official_emis,exact,open
-BLZ_000174,P30404,BLZ,Ranchito Government Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,,,18.3796863,-88.4122235,official_emis,exact,open
-BLZ_000175,P25401,BLZ,Raymond Sheppard Nazarene Primary School,,1,Primary,public,Belize,Cayo,Cayo South,,rural,,,17.2585413,-88.7915227,official_emis,exact,open
-BLZ_000176,P56302,BLZ,Red Bank Christian School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.61964,-88.56008,official_emis,exact,open
-BLZ_000177,P51302,BLZ,Richard Quinn RC Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.65261144,-88.50952111,official_emis,exact,open
-BLZ_000178,S21001,BLZ,Sacred Heart College,,2|3,Secondary,public,Belize,Cayo,Cayo North East,,urban,,,17.16106939,-89.07501095,official_emis,exact,open
-BLZ_000179,P61105,BLZ,Sacred Heart RC Primary School,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,15.984,-89.105606,official_emis,exact,open
-BLZ_000180,P51004,BLZ,Sacred Heart RC Primary School,,1,Primary,public,Belize,,Dangriga,,urban,,,16.9725543,-88.22269528,official_emis,exact,open
-BLZ_000181,P21005,BLZ,Sacred Heart RC Primary School-CYO,,1,Primary,public,Belize,Cayo,Cayo North East,,urban,,,17.15722596,-89.07204999,official_emis,exact,open
-BLZ_000182,S10004,BLZ,Sadie Vernon Technical High School,,2|3,Secondary,public,Belize,Belize,Lake Independence,,urban,,,17.501393,-88.200535,official_emis,exact,open
-BLZ_000183,P12304,BLZ,Saint Agnes Anglican Primary School,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.343375,-88.55092,official_emis,exact,open
-BLZ_000184,P51201,BLZ,Saint Alphonsus RC Primary,,1,Primary,public,Belize,,Stann Creek West,,rural,,,16.56613,-88.36658,official_emis,exact,open
-BLZ_000185,P22001,BLZ,Saint Andrew Anglican Primary School,,1,Primary,public,Belize,Cayo,Cayo North East,,urban,,,17.162648,-89.07193407,official_emis,exact,open
-BLZ_000186,P22002,BLZ,Saint Ann's Anglican Primary School,,1,Primary,public,Belize,Cayo,Belmopan,,urban,,,17.2498284,-88.7686522,official_emis,exact,open
-BLZ_000187,P51404,BLZ,Saint Augustine RC Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,17.02708,-88.51212,official_emis,exact,open
-BLZ_000188,P22402,BLZ,Saint Barnabas Anglican Primary School,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,,,17.1865311,-89.00141388,official_emis,exact,open
-BLZ_000189,P61003,BLZ,Saint Benedict RC Primary,,1,Primary,public,Belize,Toledo,Toledo East,,urban,,,16.104267,-88.8175708,official_emis,exact,open
-BLZ_000190,S11002,BLZ,Saint Catherine Academy,,2|3,Secondary,public,Belize,,Fort George,,urban,,,17.49654584,-88.18271036,official_emis,exact,open
-BLZ_000191,P60105,BLZ,Saint Cuthberts Primary School,,1,Primary,public,Belize,,Toledo East,,rural,,,16.272939,-88.544527,official_emis,exact,open
-BLZ_000192,P21407,BLZ,Saint Edmund Campion Primary School,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,,,17.2250142,-88.8571977,official_emis,exact,open
-BLZ_000193,P31002,BLZ,Saint Francis Xavier Primary School,,1,Primary,public,Belize,Corozal,Corozal Bay,,urban,,,18.39089699,-88.38581614,official_emis,exact,open
-BLZ_000194,P21408,BLZ,Saint Francis Xavier RC Primary School-CYO,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,,,17.18062135,-89.03596134,official_emis,exact,open
-BLZ_000195,P22401,BLZ,Saint Hilda's Anglican Primary School,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,,,17.19352,-88.97925,official_emis,exact,open
-BLZ_000196,S21003,BLZ,Saint Ignatius High School,,2|3,Secondary,public,Belize,Cayo,Cayo Central,,urban,,,17.15785688,-89.06653845,official_emis,exact,open
-BLZ_000197,P11007,BLZ,Saint Ignatius RC Primary School,,1,Primary,public,Belize,Belize,Queen Square,,urban,,,17.49181137,-88.19226641,official_emis,exact,open
-BLZ_000198,P11008,BLZ,Saint John Vianney Primay School,,1,Primary,public,Belize,Belize,Queen Square,,urban,,,17.48762349,-88.19853386,official_emis,exact,open
-BLZ_000199,P61103,BLZ,Saint John the Baptist RC Primary School,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,16.047898,-89.001404,official_emis,exact,open
-BLZ_000200,P12006,BLZ,Saint John's Anglican Primary School,,1,Primary,public,Belize,Belize,Queen Square,,urban,,,17.48887096,-88.19240187,official_emis,exact,open
-BLZ_000201,S11003,BLZ,Saint John's College,,2|3,Secondary,public,Belize,Belize,Caribbean Shores,,urban,,,17.512349,-88.199187,official_emis,exact,open
-BLZ_000202,P52201,BLZ,Saint John's Memorial Anglican Primary School,,1,Primary,public,Belize,,Stann Creek West,,rural,,,16.5212091,-88.3702958,official_emis,exact,open
-BLZ_000203,P21403,BLZ,Saint Joseph RC - Cotton Tree,,1,Primary,public,Belize,Cayo,Cayo South,,rural,,,17.27624414,-88.71113398,official_emis,exact,open
-BLZ_000204,P11011,BLZ,Saint Joseph RC Primary,,1,Primary,public,Belize,Belize,Freetown,,urban,,,17.50412008,-88.19197912,official_emis,exact,open
-BLZ_000205,P61102,BLZ,Saint Joseph RC Primary School,,1,Primary,public,Belize,,Toledo East,,rural,,,15.999285,-88.918495,official_emis,exact,open
-BLZ_000206,P21103,BLZ,Saint Joseph RC-Duck Run 2,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,,,17.24210234,-89.02372167,official_emis,exact,open
-BLZ_000207,P51403,BLZ,Saint Jude RC Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.7983079,-88.3814957,official_emis,exact,open
-BLZ_000208,P21402,BLZ,Saint Jude RC Primary School-CYO,,1,Primary,public,Belize,Cayo,Cayo South,,rural,,,17.243563,-88.8248689,official_emis,exact,open
-BLZ_000209,P13004,BLZ,Saint Luke Methodist Primary,,1,Primary,public,Belize,Belize,Lake Independence,,urban,,,17.50100318,-88.20008709,official_emis,exact,open
-BLZ_000210,P21406,BLZ,Saint Margaret Mary RC Primary School,,1,Primary,public,Belize,Cayo,Cayo South,,rural,,,17.08976851,-88.61246113,official_emis,exact,open
-BLZ_000211,P61110,BLZ,Saint Mark's RC Primary School,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.02241,-89.18041,official_emis,exact,open
-BLZ_000212,P21409,BLZ,Saint Martin De Porres RC Primary School-CYO,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,,,17.22512812,-88.91261328,official_emis,exact,open
-BLZ_000213,P11012,BLZ,Saint Martin de Porres Primary School,,1,Primary,public,Belize,Belize,Lake Independence,,urban,,,17.49932701,-88.20095059,official_emis,exact,open
-BLZ_000214,P20402,BLZ,Saint Martin's Government Primary School,,1,Primary,public,Belize,Cayo,Belmopan,,rural,,,17.251379,-88.75874,official_emis,exact,open
-BLZ_000215,P12008,BLZ,Saint Mary's Anglican Primary School,,1,Primary,public,Belize,Belize,Fort George,,urban,,,17.49564532,-88.18431715,official_emis,exact,open
-BLZ_000216,P52402,BLZ,Saint Matthew's Anglican Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.99555047,-88.36676786,official_emis,exact,open
-BLZ_000217,P20403,BLZ,Saint Matthew's Government Primary School,,1,Primary,public,Belize,Cayo,Cayo South,,rural,,,17.27657462,-88.64609264,official_emis,exact,open
-BLZ_000218,P41203,BLZ,Saint Michael RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,,,17.8729365,-88.77296322,official_emis,exact,open
-BLZ_000219,P21404,BLZ,Saint Michael RC Primary,,1,Primary,public,Belize,Cayo,Belmopan,,urban,,,17.23463967,-88.77944361,official_emis,exact,open
-BLZ_000220,P21106,BLZ,Saint Oscar Romero RC Primary School,,1,Primary,public,Belize,Cayo,Cayo South,,rural,,,17.3363676,-88.8348297,official_emis,exact,open
-BLZ_000221,P32001,BLZ,Saint Paul's Anglican Primary School,,1,Primary,public,Belize,Corozal,Corozal Bay,,urban,,,18.38881,-88.38893,official_emis,exact,open
-BLZ_000222,P61408,BLZ,Saint Paul's RC Primary School,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,16.61176,-88.57989,official_emis,exact,open
-BLZ_000223,P61002,BLZ,Saint Peter Claver Primary School,,1,Primary,public,Belize,,Toledo East,,urban,,,16.097638,-88.805684,official_emis,exact,open
-BLZ_000224,P42001,BLZ,Saint Peter's Anglican Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk Central,,urban,,,18.082147,-88.561989,official_emis,exact,open
-BLZ_000225,P61402,BLZ,Saint Phillip RC Primary School,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,16.12135,-88.7958,official_emis,exact,open
-BLZ_000226,P62102,BLZ,Saint Stephen's Anglican Primary School,,1,Primary,public,Belize,,Toledo East,,rural,,,16.36225527,-88.48554268,official_emis,exact,open
-BLZ_000227,P11404,BLZ,Saint Therese RC Primary School,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.56883699,-88.40152158,official_emis,exact,open
-BLZ_000228,P21411,BLZ,Saint Vincent Pallotti R.C. Primary School,,1,Primary,public,Belize,Cayo,Cayo South,,rural,,,17.20926,-88.94246,official_emis,exact,open
-BLZ_000229,P30405,BLZ,San Antonio Government Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,,,18.40240233,-88.39945084,official_emis,exact,open
-BLZ_000230,P41202,BLZ,San Antonio RC Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,,,18.13153996,-88.67571368,official_emis,exact,open
-BLZ_000231,P21202,BLZ,San Antonio RC Primary School-CYO,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,,,17.07892029,-89.02133539,official_emis,exact,open
-BLZ_000232,P29201,BLZ,San Antonio United Pentecostal Primary School,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,,,17.08143009,-89.02493529,official_emis,exact,open
-BLZ_000233,P61111,BLZ,San Benito Poite RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.112779,-89.193061,official_emis,exact,open
-BLZ_000234,P40105,BLZ,San Carlos Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,,,17.71818396,-88.6545792,official_emis,exact,open
-BLZ_000235,P41404,BLZ,San Estevan RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,,,18.14988835,-88.51120427,official_emis,exact,open
-BLZ_000236,P60202,BLZ,San Felipe Government Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.132167,-88.908473,official_emis,exact,open
-BLZ_000237,P41004,BLZ,San Francisco RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk Central,,urban,,,18.08217814,-88.56684802,official_emis,exact,open
-BLZ_000238,P61203,BLZ,San Francisco de Jeronimo Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.207806,-89.139379,official_emis,exact,open
-BLZ_000239,P60109,BLZ,San Isidro Government Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,16.50802041,-88.54402495,official_emis,exact,open
-BLZ_000240,P31409,BLZ,San Joaquin RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,,,18.34877894,-88.44273109,official_emis,exact,open
-BLZ_000241,P40403,BLZ,San Jose Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,,,18.19686419,-88.56918512,official_emis,exact,open
-BLZ_000242,P41405,BLZ,San Jose Nuevo Palmar RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk East,,rural,,,18.06054628,-88.56682743,official_emis,exact,open
-BLZ_000243,P61112,BLZ,San Jose RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.265834,-89.094874,official_emis,exact,open
-BLZ_000244,P21410,BLZ,San Jose Succotz RC Primary,,1,Primary,public,Belize,Cayo,Cayo West,,rural,,,17.0840244,-89.1270446,official_emis,exact,open
-BLZ_000245,P51301,BLZ,San Juan Bosco Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.56906681,-88.5225968,official_emis,exact,open
-BLZ_000246,P49401,BLZ,San Lazaro Methodist Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,,,18.03806787,-88.6604248,official_emis,exact,open
-BLZ_000247,P41406,BLZ,San Lazaro RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,,,18.0389503,-88.66156877,official_emis,exact,open
-BLZ_000248,P61119,BLZ,San Lucas RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.079023,-89.098857,official_emis,exact,open
-BLZ_000249,P41407,BLZ,San Luis RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,,,18.19559373,-88.6033673,official_emis,exact,open
-BLZ_000250,P61404,BLZ,San Luis Rey RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.2438451,-89.02592314,official_emis,exact,open
-BLZ_000251,P61113,BLZ,San Marcos RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.215832,-88.903861,official_emis,exact,open
-BLZ_000252,P21107,BLZ,San Marcos RC Primary-CYO,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,,,17.26439879,-88.97949083,official_emis,exact,open
-BLZ_000253,P61405,BLZ,San Miguel RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.293903,-88.933802,official_emis,exact,open
-BLZ_000254,P31410,BLZ,San Narciso RC Primary,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,,,18.3015616,-88.5245933,official_emis,exact,open
-BLZ_000255,P40406,BLZ,San Pablo Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,,,18.21294123,-88.56616715,official_emis,exact,open
-BLZ_000256,P41408,BLZ,San Pablo RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,,,18.2064422,-88.567178,official_emis,exact,open
-BLZ_000257,P61406,BLZ,San Pedro Columbia RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.2715188,-88.9574563,official_emis,exact,open
-BLZ_000258,P30406,BLZ,San Pedro Government Primary,,1,Primary,public,Belize,Corozal,Corozal North,,rural,,,18.3387883,-88.4941397,official_emis,exact,open
-BLZ_000259,S19002,BLZ,San Pedro High School,,2|3,Secondary,public,Belize,Belize,Belize Rural North,,urban,,,17.924698,-87.95937,official_emis,exact,open
-BLZ_000260,P11004,BLZ,San Pedro RC Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,urban,,,17.917537,-87.963401,official_emis,exact,open
-BLZ_000261,P41204,BLZ,San Roman RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,,,18.1920356,-88.64116966,official_emis,exact,open
-BLZ_000262,P61114,BLZ,San Vicente RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.239615,-89.199978,official_emis,exact,open
-BLZ_000263,P31411,BLZ,San Victor RC Primary,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,,,18.26100978,-88.57569464,official_emis,exact,open
-BLZ_000264,P60204,BLZ,Santa Ana Government School,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.109247,-88.953262,official_emis,exact,open
-BLZ_000265,P34410,BLZ,Santa Clara SDA Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,,,18.29511,-88.50938,official_emis,exact,open
-BLZ_000266,P31412,BLZ,Santa Clara/San Roman RC Primary,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,,,18.29669215,-88.50876282,official_emis,exact,open
-BLZ_000267,P20006,BLZ,Santa Cruz Government Primary,,1,Primary,public,Belize,Cayo,Cayo Central,,urban,,,17.15926993,-89.05149304,official_emis,exact,open
-BLZ_000268,P40102,BLZ,Santa Cruz Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,,,18.1138973,-88.7086599,official_emis,exact,open
-BLZ_000269,P50105,BLZ,Santa Cruz Government Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.69997,-88.42847,official_emis,exact,open
-BLZ_000270,P61115,BLZ,Santa Cruz RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.233619,-89.077084,official_emis,exact,open
-BLZ_000271,P29003,BLZ,Santa Elena Baptist Primary,,1,Primary,public,Belize,Cayo,Cayo North East,,urban,,,17.16207,-89.06293,official_emis,exact,open
-BLZ_000272,P61116,BLZ,Santa Elena RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.229817,-89.108217,official_emis,exact,open
-BLZ_000273,P21007,BLZ,Santa Elena RC Primary-CYO,,1,Primary,public,Belize,Cayo,Cayo Central,,urban,,,17.16585938,-89.05920476,official_emis,exact,open
-BLZ_000274,P21301,BLZ,Santa Familia RC Primary,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,,,17.18958469,-89.07090356,official_emis,exact,open
-BLZ_000275,P40103,BLZ,Santa Martha Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk East,,rural,,,18.01564334,-88.50202443,official_emis,exact,open
-BLZ_000276,P36401,BLZ,Santa Rita Christian Primary,,1,Primary,public,Belize,Corozal,Corozal North,,urban,,,18.40318903,-88.39524163,official_emis,exact,open
-BLZ_000277,P61117,BLZ,Santa Teresa RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.13597,-89.053362,official_emis,exact,open
-BLZ_000278,P31104,BLZ,Sarteneja La Inmaculada R.C. Primary School,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,,,18.3540657,-88.138155,official_emis,exact,open
-BLZ_000279,P35101,BLZ,Sarteneja Nazarene Primary,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,,,18.3552006,-88.1418114,official_emis,exact,open
-BLZ_000280,P54101,BLZ,Shiloh SDA Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.53742191,-88.41591046,official_emis,exact,open
-BLZ_000281,P53402,BLZ,Silk Grass Methodist Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.88601661,-88.33807126,official_emis,exact,open
-BLZ_000282,P61205,BLZ,Silver Creek RC Primary School,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.279107,-88.890458,official_emis,exact,open
-BLZ_000283,P53201,BLZ,Sittee River Methodist Primary,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.821919,-88.3207051,official_emis,exact,open
-BLZ_000284,P56001,BLZ,Solid Rock Christian Academy,,1,Primary,public,Belize,Stann Creek,Dangriga,,urban,,,16.95860631,-88.22855755,official_emis,exact,open
-BLZ_000285,P44001,BLZ,Solomon's SDA Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk East,,urban,,,18.06702095,-88.57057363,official_emis,exact,open
-BLZ_000286,S59001,BLZ,Stann Creek Ecumenical College,,2|3,Secondary,public,Belize,Stann Creek,Dangriga,,urban,,,16.96301332,-88.22789998,official_emis,exact,open
-BLZ_000287,P10001,BLZ,Stella Maris Special Education and Life Skills Learning Center,,1,Primary,public,Belize,Belize,Freetown,,urban,,,17.50525551,-88.19594997,official_emis,exact,open
-BLZ_000288,P61118,BLZ,Sunday Wood RC Primary School,,1,Primary,public,Belize,Toledo,Toledo East,,rural,,,16.038796,-89.033344,official_emis,exact,open
-BLZ_000289,P19006,BLZ,The Salvation Army Primary School,,1,Primary,public,Belize,Belize,Mesopotamia,,urban,,,17.4948832,-88.19011456,official_emis,exact,open
-BLZ_000290,S69001,BLZ,Toledo Community College,,2|3,Secondary,public,Belize,,Toledo East,,urban,,,16.10511058,-88.80636306,official_emis,exact,open
-BLZ_000291,P40405,BLZ,Trial Farm Government Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,,,18.09814363,-88.56322477,official_emis,exact,open
-BLZ_000292,P40404,BLZ,Trinidad Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,,,18.09826674,-88.56340216,official_emis,exact,open
-BLZ_000293,P13005,BLZ,Trinity Methodist Primary School,,1,Primary,public,Belize,Belize,Freetown,,urban,,,17.50994269,-88.19171817,official_emis,exact,open
-BLZ_000294,P60107,BLZ,Trio Government Primary School,,1,Primary,public,Belize,Toledo,Toledo West,,rural,,,16.5156931,-88.636284,official_emis,exact,open
-BLZ_000295,S67102,BLZ,Tumul K’in Center of Learning,,2|3,Secondary,public,Belize,Toledo,Toledo West,,rural,,,16.19433469,-89.04781453,official_emis,exact,open
-BLZ_000296,P50104,BLZ,United Community Primary,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,,,16.6574202,-88.4706642,official_emis,exact,open
-BLZ_000297,P20002,BLZ,United Evergreen Primary,,1,Primary,public,Belize,Cayo,Belmopan,,urban,,,17.25241865,-88.76668934,official_emis,exact,open
-BLZ_000298,P19007,BLZ,Unity Presbyterian Primary,,1,Primary,public,Belize,Belize,Collet,,urban,,,17.49697505,-88.20656984,official_emis,exact,open
-BLZ_000299,P26101,BLZ,Valley of Peace Christian Primary School,,1,Primary,public,Belize,Cayo,Cayo South,,rural,,,17.33256207,-88.83483796,official_emis,exact,open
-BLZ_000300,P25402,BLZ,Victorious Nazarene Primary School,,1,Primary,public,Belize,Cayo,Cayo West,,rural,,,17.0786647,-89.1242145,official_emis,exact,open
-BLZ_000301,S13001,BLZ,Wesley College,,2|3,Secondary,public,Belize,Belize,Albert,,urban,,,17.48728613,-88.19032725,official_emis,exact,open
-BLZ_000302,P13006,BLZ,Wesley Lower Primary School,,1,Primary,public,Belize,Belize,Albert,,urban,,,17.49112395,-88.18768355,official_emis,exact,open
-BLZ_000303,P13008,BLZ,Wesley Upper Primary School,,1,Primary,public,Belize,Belize,Mesopotamia,,urban,,,17.4902671,-88.1948254,official_emis,exact,open
-BLZ_000304,P31413,BLZ,Xaibe RC Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,,,18.38767595,-88.43043873,official_emis,exact,open
-BLZ_000305,P41409,BLZ,Yo Creek Sacred Heart RC Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,,,18.0908838,-88.6367919,official_emis,exact,open
-BLZ_000306,P13202,BLZ,Zion Park Methodist Primary School,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,,,17.814806,-88.309915,official_emis,exact,open
-BLZ_000307,P54001,BLZ,Zion SDA Primary School,,1,Primary,public,Belize,Stann Creek,Dangriga,,urban,,,16.96474198,-88.22070717,official_emis,exact,open
+BLZ_000001,S50102,BLZ,Agriculture and Natural Resource Institute - ANRI,,2|3,Secondary,public,Belize,Stann Creek,Stann Creek West,,rural,11,rural,16.977876,-88.353042,official_emis,exact,unknown
+BLZ_000002,P61101,BLZ,Aguacate RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.161555,-89.091994,official_emis,exact,unknown
+BLZ_000003,P12001,BLZ,All Saints Anglican Primary School,,1,Primary,public,Belize,Belize,Freetown,,urban,30,urban,17.50660556,-88.19344599,official_emis,exact,unknown
+BLZ_000004,S29101,BLZ,Alvin L. Young Nazarene High,,2|3,Secondary,public,Belize,Cayo,Cayo West,,rural,12,rural,17.077725,-89.1235953,official_emis,exact,unknown
+BLZ_000005,S12001,BLZ,Anglican Cathedral College,,2|3,Secondary,public,Belize,Belize,Albert,,urban,30,urban,17.4891354,-88.1877227,official_emis,exact,unknown
+BLZ_000006,P20401,BLZ,Armenia Government Primary School,,1,Primary,public,Belize,Cayo,Cayo South,,rural,12,rural,17.15552726,-88.74495422,official_emis,exact,unknown
+BLZ_000007,P29002,BLZ,Arms of Love Primary,,1,Primary,public,Belize,Cayo,Cayo North,,urban,21,peri_urban,17.14421006,-89.07819206,official_emis,exact,unknown
+BLZ_000008,P41401,BLZ,August Pine Ridge RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,13,rural,17.9731652,-88.7267839,official_emis,exact,unknown
+BLZ_000009,S34101,BLZ,Belize Adventist College,,2|3,Secondary,public,Belize,Corozal,Corozal North,,rural,13,rural,18.36517,-88.43607,official_emis,exact,unknown
+BLZ_000010,S40101,BLZ,Belize High School of Agriculture,,2|3,Secondary,public,Belize,Orange Walk,Orange Walk South,,rural,12,rural,18.0305483,-88.6730195,official_emis,exact,unknown
+BLZ_000011,S10101,BLZ,Belize Rural High School,,2|3,Secondary,public,Belize,Belize,Belize Rural North,,rural,12,rural,17.5517134,-88.5557391,official_emis,exact,unknown
+BLZ_000012,P10302,BLZ,Belize Rural Primary School,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,12,rural,17.5531873,-88.5554351,official_emis,exact,unknown
+BLZ_000013,S60103,BLZ,Bella Vista Government Secondary School,,2|3,Secondary,public,Belize,Toledo,Toledo East,,rural,11,rural,16.50363212,-88.51737314,official_emis,exact,unknown
+BLZ_000014,S28001,BLZ,Belmopan Baptist High School,,2|3,Secondary,public,Belize,Cayo,Cayo South,,rural,12,rural,17.2700661,-88.78877827,official_emis,exact,unknown
+BLZ_000015,S20001,BLZ,Belmopan Comprehensive School,,2|3,Secondary,public,Belize,Cayo,Belmopan,,urban,23,urban,17.245532,-88.7689387,official_emis,exact,unknown
+BLZ_000016,S23001,BLZ,Belmopan Methodist High School,,2|3,Secondary,public,Belize,Cayo,Belmopan,,urban,23,urban,17.2473976,-88.7624841,official_emis,exact,unknown
+BLZ_000017,P64001,BLZ,Bethel SDA Primary,,1,Primary,public,Belize,Toledo,Toledo East,,urban,12,rural,16.10509,-88.820455,official_emis,exact,unknown
+BLZ_000018,P61401,BLZ,Big Falls RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.25809102,-88.8835809,official_emis,exact,unknown
+BLZ_000019,P24450,BLZ,Billy White SDA Primary,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,12,rural,17.21390186,-89.04963713,official_emis,exact,unknown
+BLZ_000020,P10401,BLZ,Biscayne Government Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,12,rural,17.7133172,-88.4524974,official_emis,exact,unknown
+BLZ_000021,S41002,BLZ,Bishop Martin High School,,2|3,Secondary,public,Belize,Orange Walk,Orange Walk North,,urban,21,peri_urban,18.0980072,-88.5739059,official_emis,exact,unknown
+BLZ_000022,P21009,BLZ,Bishop O.P. Martin RC Primary,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,23,urban,17.1592719,-89.0835264,official_emis,exact,unknown
+BLZ_000023,P61201,BLZ,Blue Creek RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.19895121,-89.04589857,official_emis,exact,unknown
+BLZ_000024,P20201,BLZ,Buena Vista Government Primary,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,12,rural,17.2500862,-88.9424006,official_emis,exact,unknown
+BLZ_000025,P31402,BLZ,Buena Vista RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,11,rural,18.23425545,-88.52545564,official_emis,exact,unknown
+BLZ_000026,P24401,BLZ,Bullet Tree SDA Primary,,1,Primary,public,Belize,Cayo,Cayo North,,rural,13,rural,17.16714223,-89.11225311,official_emis,exact,unknown
+BLZ_000027,P13401,BLZ,Burrell Boom Methodist Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,13,rural,17.568794,-88.4034022,official_emis,exact,unknown
+BLZ_000028,P15001,BLZ,Buttonwood Bay Nazarene Primary School,,1,Primary,public,Belize,Belize,Caribbean Shores,,urban,30,urban,17.5119826,-88.210357,official_emis,exact,unknown
+BLZ_000029,P30401,BLZ,Calcutta Government Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,13,rural,18.36313497,-88.43205515,official_emis,exact,unknown
+BLZ_000030,P34401,BLZ,Calcutta SDA Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,13,rural,18.36272172,-88.43864066,official_emis,exact,unknown
+BLZ_000031,P31403,BLZ,Caledonia RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,13,rural,18.2295071,-88.4739961,official_emis,exact,unknown
+BLZ_000032,P19002,BLZ,Calvary Temple Primary School,,1,Primary,public,Belize,Belize,Albert,,urban,30,urban,17.49719353,-88.18978581,official_emis,exact,unknown
+BLZ_000033,S14001,BLZ,Canaan SDA High School,,2|3,Secondary,public,Belize,Belize,Caribbean Shores,,urban,30,urban,17.5116047,-88.2094435,official_emis,exact,unknown
+BLZ_000034,P40401,BLZ,Carmelita Government Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk East,,rural,12,rural,18.0136924,-88.5432047,official_emis,exact,unknown
+BLZ_000035,P11201,BLZ,Caye Caulker RC Primary,,1,Primary,public,Belize,,Belize Rural North,,rural,13,rural,17.7387978,-88.02636401,official_emis,exact,unknown
+BLZ_000036,P16001,BLZ,Central Christian Primary,,1,Primary,public,Belize,Belize,Pickstock,,urban,30,urban,17.50385702,-88.19453372,official_emis,exact,unknown
+BLZ_000037,P30402,BLZ,Chan Chen Government Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,12,rural,18.44027843,-88.42791132,official_emis,exact,unknown
+BLZ_000038,P40402,BLZ,Chan Pine Ridge Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk East,,rural,11,rural,18.03451029,-88.58306788,official_emis,exact,unknown
+BLZ_000039,P49001,BLZ,Chapel Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk Central,,urban,23,urban,18.08663569,-88.561185,official_emis,exact,unknown
+BLZ_000040,P52001,BLZ,Christ the King Anglican Primary,,1,Primary,public,Belize,,Dangriga,,urban,23,urban,16.971345,-88.2205947,official_emis,exact,unknown
+BLZ_000041,P34001,BLZ,Christiline Gill SDA Primary School,,1,Primary,public,Belize,Corozal,Corozal Bay,,urban,23,urban,18.3961924,-88.3928434,official_emis,exact,unknown
+BLZ_000042,P31102,BLZ,Chunox RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,12,rural,18.293324,-88.3585596,official_emis,exact,unknown
+BLZ_000043,P34101,BLZ,Chunox SDA Primary School,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,12,rural,18.2931429,-88.3549183,official_emis,exact,unknown
+BLZ_000044,S30102,BLZ,Chunox Saint Viator Vocational High School,,2|3,Secondary,public,Belize,Corozal,Corozal South East,,rural,12,rural,18.3046976,-88.3299479,official_emis,exact,unknown
+BLZ_000045,P49402,BLZ,Compassion UECB Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,13,rural,18.09183031,-88.64028513,official_emis,exact,unknown
+BLZ_000046,P39402,BLZ,Concepcion Presbyterian Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,13,rural,18.32252938,-88.46676247,official_emis,exact,unknown
+BLZ_000047,P31404,BLZ,Concepcion RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,13,rural,18.32397393,-88.46698687,official_emis,exact,unknown
+BLZ_000048,P31101,BLZ,Copper Bank RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,12,rural,18.3200791,-88.3564069,official_emis,exact,unknown
+BLZ_000049,P61104,BLZ,Corazon Creek RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.053486,-89.122435,official_emis,exact,unknown
+BLZ_000050,S60102,BLZ,Corazon Creek Technical High,,2|3,Secondary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.053391,-89.119719,official_emis,exact,unknown
+BLZ_000051,S37101,BLZ,Cornerstone Presbyterian High School,,2|3,Secondary,public,Belize,Corozal,Corozal North,,rural,11,rural,18.320742,-88.4913423,official_emis,exact,unknown
+BLZ_000052,P39001,BLZ,Corozal Church of Christ Primary School,,1,Primary,public,Belize,Corozal,Corozal Bay,,urban,23,urban,18.3921435,-88.3977439,official_emis,exact,unknown
+BLZ_000053,S39001,BLZ,Corozal Community College,,2|3,Secondary,public,Belize,Corozal,Corozal North,,urban,23,urban,18.394154,-88.4057988,official_emis,exact,unknown
+BLZ_000054,P33001,BLZ,Corozal Methodist Primary School,,1,Primary,public,Belize,Corozal,Corozal Bay,,urban,23,urban,18.3914223,-88.3846929,official_emis,exact,unknown
+BLZ_000055,P35001,BLZ,Corozal Nazarene Primary School,,1,Primary,public,Belize,Corozal,Corozal Bay,,urban,23,urban,18.3901086,-88.3893545,official_emis,exact,unknown
+BLZ_000056,P60102,BLZ,Crique Jute Government Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.272375,-89.016066,official_emis,exact,unknown
+BLZ_000057,P31405,BLZ,Cristo Rey RC Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,12,rural,18.34813114,-88.49621509,official_emis,exact,unknown
+BLZ_000058,P21201,BLZ,Cristo Rey RC Primary School-CYO,,1,Primary,public,Belize,Cayo,Cayo North,,rural,12,rural,17.13238108,-89.05491947,official_emis,exact,unknown
+BLZ_000059,P10301,BLZ,Crooked Tree Government Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,12,rural,17.77630954,-88.53620898,official_emis,exact,unknown
+BLZ_000060,S51002,BLZ,Delille Academy High,,2|3,Secondary,public,Belize,Stann Creek,Dangriga,,urban,21,peri_urban,16.9666388,-88.23269916,official_emis,exact,unknown
+BLZ_000061,P13002,BLZ,Ebenezer Methodist Primary School,,1,Primary,public,Belize,Belize,Fort George,,urban,30,urban,17.50070994,-88.18624379,official_emis,exact,unknown
+BLZ_000062,S24001,BLZ,Eden SDA High School,,2|3,Secondary,public,Belize,Cayo,Cayo Central,,urban,23,urban,17.1652635,-89.0533178,official_emis,exact,unknown
+BLZ_000063,P24001,BLZ,Eden SDA Primary,,1,Primary,public,Belize,Cayo,Cayo Central,,urban,23,urban,17.163534,-89.054542,official_emis,exact,unknown
+BLZ_000064,S10001,BLZ,Edward P. Yorke High School,,2|3,Secondary,public,Belize,Belize,Caribbean Shores,,urban,30,urban,17.508747,-88.1995511,official_emis,exact,unknown
+BLZ_000065,P20104,BLZ,El Progresso Community Primary School,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,12,rural,17.10021099,-88.95346121,official_emis,exact,unknown
+BLZ_000066,P24002,BLZ,El Shaddai SDA Primary,,1,Primary,public,Belize,Cayo,Belmopan,,urban,23,urban,17.25770303,-88.76700135,official_emis,exact,unknown
+BLZ_000067,P14002,BLZ,Ephesus SDA Primary,,1,Primary,public,Belize,Belize,Caribbean Shores,,urban,30,urban,17.5028534,-88.1899488,official_emis,exact,unknown
+BLZ_000068,P53001,BLZ,Epworth Methodist Primary,,1,Primary,public,Belize,,Dangriga,,urban,23,urban,16.96934443,-88.22204658,official_emis,exact,unknown
+BLZ_000069,S30101,BLZ,Escuela Secundaria Tecnica Mexico,,2|3,Secondary,public,Belize,Corozal,Corozal South West,,rural,13,rural,18.3038216,-88.5097694,official_emis,exact,unknown
+BLZ_000070,S10005,BLZ,Excelsior High School,,2|3,Secondary,public,Belize,Belize,Queen Square,,urban,30,urban,17.48807239,-88.19932073,official_emis,exact,unknown
+BLZ_000071,P61407,BLZ,Fabian Cayetano RC Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,11,rural,16.47377481,-88.62242232,official_emis,exact,unknown
+BLZ_000072,P25002,BLZ,Faith Nazarene Primary,,1,Primary,public,Belize,Cayo,Cayo North East,,urban,23,urban,17.1593016,-89.0718259,official_emis,exact,unknown
+BLZ_000073,P41005,BLZ,Fel Briceno Academy Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,urban,21,peri_urban,18.09972918,-88.57711709,official_emis,exact,unknown
+BLZ_000074,P40104,BLZ,Fire Burn Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk East,,rural,12,rural,17.971149,-88.388234,official_emis,exact,unknown
+BLZ_000075,P31499,BLZ,Fire Burn RC Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,13,rural,18.387728,-88.430817,official_emis,exact,unknown
+BLZ_000076,P63401,BLZ,Forest Home Methodist Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,12,rural,16.13512765,-88.82907736,official_emis,exact,unknown
+BLZ_000077,P20301,BLZ,Frank's Eddy Government Primary,,1,Primary,public,Belize,Cayo,Cayo South,,rural,12,rural,17.25571545,-88.63460039,official_emis,exact,unknown
+BLZ_000078,P10101,BLZ,Gales Point Government Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,12,rural,17.1759659,-88.33069856,official_emis,exact,unknown
+BLZ_000079,P20003,BLZ,Garden City Primary,,1,Primary,public,Belize,Cayo,Belmopan,,urban,23,urban,17.24135329,-88.76885633,official_emis,exact,unknown
+BLZ_000080,S50301,BLZ,Georgetown Technical High School,,2|3,Secondary,public,Belize,Stann Creek,Stann Creek West,,rural,12,rural,16.64068446,-88.49238052,official_emis,exact,unknown
+BLZ_000081,P60104,BLZ,Golden Stream Government Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,11,rural,16.35095604,-88.79922442,official_emis,exact,unknown
+BLZ_000082,P19003,BLZ,Grace Primary,,1,Primary,public,Belize,Belize,Mesopotamia,,urban,30,urban,17.49431009,-88.19180459,official_emis,exact,unknown
+BLZ_000083,P60106,BLZ,Graham Creek Government Primary School,,1,Primary,public,Belize,Toledo,Toledo East,,rural,11,rural,15.93168,-89.12791,official_emis,exact,unknown
+BLZ_000084,P11402,BLZ,Guadalupe RC Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,12,rural,17.6283615,-88.3689477,official_emis,exact,unknown
+BLZ_000085,P49403,BLZ,Guinea Grass Pentecostal Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,13,rural,17.96526293,-88.59758867,official_emis,exact,unknown
+BLZ_000086,P41402,BLZ,Guinea Grass Roman Catholic Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,13,rural,17.96684204,-88.59735397,official_emis,exact,unknown
+BLZ_000087,P50001,BLZ,Gulisi Community Primary,,1,Primary,public,Belize,Stann Creek,Dangriga,,urban,12,rural,16.96199367,-88.24126268,official_emis,exact,unknown
+BLZ_000088,S10002,BLZ,Gwen Lizarraga High School,,2|3,Secondary,public,Belize,Belize,Collet,,urban,30,urban,17.4944598,-88.2001554,official_emis,exact,unknown
+BLZ_000089,P10402,BLZ,Hattieville Government Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,13,rural,17.4485986,-88.3934689,official_emis,exact,unknown
+BLZ_000090,P14450,BLZ,Hattieville SDA Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,12,rural,17.462312,-88.392619,official_emis,exact,unknown
+BLZ_000091,P20105,BLZ,Hidden Paradise Government Primary,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,12,rural,17.26126489,-89.03432585,official_emis,exact,unknown
+BLZ_000092,P24003,BLZ,Hills of Promise Primary,,1,Primary,public,Belize,Cayo,Cayo West,,urban,23,urban,17.07513652,-89.133134,official_emis,exact,unknown
+BLZ_000093,P51401,BLZ,Holy Angels RC Primary,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,12,rural,16.99309444,-88.37536845,official_emis,exact,unknown
+BLZ_000094,P12009,BLZ,Holy Cross Anglican Primary School,,1,Primary,public,Belize,Belize,Belize Rural North,,urban,13,rural,17.93204994,-87.95800778,official_emis,exact,unknown
+BLZ_000095,P21102,BLZ,Holy Cross RC Primary,,1,Primary,public,Belize,Cayo,Cayo West,,rural,11,rural,17.12512502,-89.13376266,official_emis,exact,unknown
+BLZ_000096,P51303,BLZ,Holy Family RC Primary,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,13,rural,16.858705,-88.28384546,official_emis,exact,unknown
+BLZ_000097,P51002,BLZ,Holy Ghost RC Primary,,1,Primary,public,Belize,Stann Creek,Dangriga,,urban,23,urban,16.95834961,-88.22036542,official_emis,exact,unknown
+BLZ_000098,P11001,BLZ,Holy Redeemer RC Primary,,1,Primary,public,Belize,Belize,Albert,,urban,30,urban,17.49672389,-88.18728754,official_emis,exact,unknown
+BLZ_000099,P53401,BLZ,Hope Creek Methodist Primary,,1,Primary,public,Belize,Stann Creek,Dangriga,,rural,12,rural,17.0027292,-88.3134707,official_emis,exact,unknown
+BLZ_000100,P25001,BLZ,Howard Smith Nazarene Primary,,1,Primary,public,Belize,Cayo,Cayo West,,urban,23,urban,17.073336,-89.1337927,official_emis,exact,unknown
+BLZ_000101,P20101,BLZ,Iguana Creek Government Primary,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,12,rural,17.29344996,-88.98886432,official_emis,exact,unknown
+BLZ_000102,P21401,BLZ,Immaculate Conception RC Primary,,1,Primary,public,Belize,Cayo,Cayo North,,rural,13,rural,17.17028661,-89.1118166,official_emis,exact,unknown
+BLZ_000103,S50101,BLZ,Independence High School,,2|3,Secondary,public,Belize,Stann Creek,Stann Creek West,,rural,22,urban,16.53673198,-88.42424198,official_emis,exact,unknown
+BLZ_000104,P50103,BLZ,Independence Primary,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,22,urban,16.53484501,-88.41500479,official_emis,exact,unknown
+BLZ_000105,P40101,BLZ,Indian Church Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,12,rural,17.75312214,-88.65842716,official_emis,exact,unknown
+BLZ_000106,P61202,BLZ,Indian Creek RC Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,11,rural,16.312807,-88.832219,official_emis,exact,unknown
+BLZ_000107,S10006,BLZ,Itz’at STEAM Academy,,2|3,Secondary,public,Belize,Belize,Freetown,,urban,30,urban,17.5043772,-88.1924081,official_emis,exact,unknown
+BLZ_000108,P61107,BLZ,Jalacte RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.203971,-89.202056,official_emis,exact,unknown
+BLZ_000109,P14001,BLZ,James Garbutt SDA Primary,,1,Primary,public,Belize,Belize,Albert,,urban,30,urban,17.4892637,-88.1886479,official_emis,exact,unknown
+BLZ_000110,S60101,BLZ,Julian Cho Technical High School,,2|3,Secondary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.228385,-88.935773,official_emis,exact,unknown
+BLZ_000111,S17101,BLZ,King's College,,2|3,Secondary,public,Belize,Belize,Belize Rural North,,rural,12,rural,17.791775,-88.311766,official_emis,exact,unknown
+BLZ_000112,P20004,BLZ,Kuxlin Ha Government Primary,,1,Primary,public,Belize,Cayo,Belmopan,,urban,21,peri_urban,17.24511902,-88.75091571,official_emis,exact,unknown
+BLZ_000113,P20404,BLZ,La Gracia Government Primary,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,12,rural,17.3538976,-88.93366512,official_emis,exact,unknown
+BLZ_000114,P41003,BLZ,La Inmaculada RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk Central,,urban,23,urban,18.07972456,-88.55877801,official_emis,exact,unknown
+BLZ_000115,P21101,BLZ,La Inmaculada RC Primary-CYO,,1,Primary,public,Belize,Cayo,Cayo West,,rural,11,rural,17.02302,-89.14862,official_emis,exact,unknown
+BLZ_000116,P19401,BLZ,Ladyville Evangelical Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,23,urban,17.5560136,-88.3101871,official_emis,exact,unknown
+BLZ_000117,P14451,BLZ,Ladyville SDA Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,21,peri_urban,17.5512126,-88.2956856,official_emis,exact,unknown
+BLZ_000118,S10102,BLZ,Ladyville Technical High School,,2|3,Secondary,public,Belize,Belize,Belize Rural North,,rural,23,urban,17.5494496,-88.3060509,official_emis,exact,unknown
+BLZ_000119,P60201,BLZ,Laguna Government Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.166292,-88.938926,official_emis,exact,unknown
+BLZ_000120,P33401,BLZ,Libertad Methodist Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,13,rural,18.30502436,-88.45572296,official_emis,exact,unknown
+BLZ_000121,P31406,BLZ,Libertad RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,13,rural,18.30565,-88.4548,official_emis,exact,unknown
+BLZ_000122,P34402,BLZ,Libertad SDA Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,13,rural,18.30507008,-88.4546444,official_emis,exact,unknown
+BLZ_000123,P59401,BLZ,Light of the Valley Baptist Primary,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,12,rural,17.0026135,-88.4501321,official_emis,exact,unknown
+BLZ_000124,P61403,BLZ,Little Flower RC Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,12,rural,16.135152,-88.822948,official_emis,exact,unknown
+BLZ_000125,P60401,BLZ,Living Word Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,11,rural,16.076112,-88.910636,official_emis,exact,unknown
+BLZ_000126,P20102,BLZ,Los Tambos Government Primary,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,12,rural,17.3273833,-89.0089457,official_emis,exact,unknown
+BLZ_000127,P40001,BLZ,Louisiana Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk East,,urban,23,urban,18.0729626,-88.56283762,official_emis,exact,unknown
+BLZ_000128,P31407,BLZ,Louisville RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,13,rural,18.31995322,-88.50963896,official_emis,exact,unknown
+BLZ_000129,P10201,BLZ,Lucky Strike Government Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,11,rural,17.78191457,-88.32019553,official_emis,exact,unknown
+BLZ_000130,P60205,BLZ,Mabil Ha Government Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.101889,-89.088083,official_emis,exact,unknown
+BLZ_000131,P61109,BLZ,Machakilha RC Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,11,rural,15.941495,-89.190573,official_emis,exact,unknown
+BLZ_000132,P63402,BLZ,Mafredi Methodist Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.24439481,-88.99248725,official_emis,exact,unknown
+BLZ_000133,P31003,BLZ,Mary Hill RC Primary School,,1,Primary,public,Belize,Corozal,Corozal Bay,,urban,21,peri_urban,18.3894977,-88.4021072,official_emis,exact,unknown
+BLZ_000134,S10003,BLZ,Maud Williams High School,,2|3,Secondary,public,Belize,Belize,Mesopotamia,,urban,30,urban,17.49192952,-88.19454973,official_emis,exact,unknown
+BLZ_000135,P50301,BLZ,Maya Mopan Government Primary,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,12,rural,16.6609704,-88.5208443,official_emis,exact,unknown
+BLZ_000136,P60203,BLZ,Medina Bank Government Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,11,rural,16.442099,-88.74388,official_emis,exact,unknown
+BLZ_000137,P60103,BLZ,Midway Government Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,12,rural,16.0617295,-88.955322,official_emis,exact,unknown
+BLZ_000138,S20002,BLZ,Mopan Technical High School,,2|3,Secondary,public,Belize,Cayo,Cayo West,,urban,23,urban,17.0760484,-89.1287156,official_emis,exact,unknown
+BLZ_000139,P20103,BLZ,More Tomorrow Government Primary,,1,Primary,public,Belize,Cayo,Cayo South,,rural,11,rural,17.34869,-88.69517,official_emis,exact,unknown
+BLZ_000140,P21002,BLZ,Mount Carmel Primary,,1,Primary,public,Belize,Cayo,Cayo West,,urban,23,urban,17.0739982,-89.13788282,official_emis,exact,unknown
+BLZ_000141,S41001,BLZ,Muffles College,,2|3,Secondary,public,Belize,Orange Walk,Orange Walk Central,,rural,23,urban,18.0860243,-88.5619272,official_emis,exact,unknown
+BLZ_000142,P19004,BLZ,Muslim Community Primary,,1,Primary,public,Belize,Belize,Port Loyola,,urban,30,urban,17.48878,-88.200574,official_emis,exact,unknown
+BLZ_000143,P60101,BLZ,Na Luum Ca Government Primary School,,1,Primary,public,Belize,Toledo,Toledo West,,rural,11,rural,16.286352,-89.080682,official_emis,exact,unknown
+BLZ_000144,S15001,BLZ,Nazarene High School,,2|3,Secondary,public,Belize,Belize,Caribbean Shores,,urban,30,urban,17.507925,-88.1981201,official_emis,exact,unknown
+BLZ_000145,S47001,BLZ,New Hope High School,,2|3,Secondary,public,Belize,Orange Walk,Orange Walk North,,urban,21,peri_urban,18.08423719,-88.57558464,official_emis,exact,unknown
+BLZ_000146,P14003,BLZ,New Horizon SDA Primary School,,1,Primary,public,Belize,Belize,Belize Rural North,,urban,13,rural,17.903028,-87.978804,official_emis,exact,unknown
+BLZ_000147,P20106,BLZ,New Life Government Primary-CYO,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,12,rural,17.2195085,-89.0195925,official_emis,exact,unknown
+BLZ_000148,P49003,BLZ,New Life Presbyterian Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,urban,23,urban,18.0928431,-88.5626669,official_emis,exact,unknown
+BLZ_000149,P41403,BLZ,Nuevo San Juan RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,11,rural,18.226415,-88.578292,official_emis,exact,unknown
+BLZ_000150,S17003,BLZ,Ocean Academy High School,,2|3,Secondary,public,Belize,,Belize Rural North,,rural,13,rural,17.7366771,-88.029892,official_emis,exact,unknown
+BLZ_000151,P29401,BLZ,Ontario Christian Primary,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,13,rural,17.2265739,-88.8899186,official_emis,exact,unknown
+BLZ_000152,S40001,BLZ,Orange Walk Technical High School,,2|3,Secondary,public,Belize,Orange Walk,Orange Walk North,,urban,21,peri_urban,18.0855768,-88.5726507,official_emis,exact,unknown
+BLZ_000153,P61301,BLZ,Our Lady of Bella Vista RC Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,13,rural,16.5093409,-88.5340734,official_emis,exact,unknown
+BLZ_000154,P41201,BLZ,Our Lady of Fatima RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk Central,,urban,21,peri_urban,18.08223,-88.567239,official_emis,exact,unknown
+BLZ_000155,P21405,BLZ,Our Lady of Fatima RC Primary-CYO,,1,Primary,public,Belize,Cayo,Cayo South,,rural,23,urban,17.2595782,-88.7922639,official_emis,exact,unknown
+BLZ_000156,S21004,BLZ,Our Lady of Guadalupe RC High School,,2|3,Secondary,public,Belize,Cayo,Belmopan,,urban,12,rural,17.26747375,-88.76513798,official_emis,exact,unknown
+BLZ_000157,P31401,BLZ,Our Lady of Guadalupe RC Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,21,peri_urban,18.4021551,-88.3834572,official_emis,exact,unknown
+BLZ_000158,P21008,BLZ,Our Lady of Guadalupe RC Primary-CYO,,1,Primary,public,Belize,Cayo,Belmopan,,urban,23,urban,17.24926728,-88.76365421,official_emis,exact,unknown
+BLZ_000159,P11202,BLZ,Our Lady of Lourdes RC Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,12,rural,17.881997,-88.313076,official_emis,exact,unknown
+BLZ_000160,P61106,BLZ,Our Lady of Sorrows R.C Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,12,rural,15.98958548,-89.21158215,official_emis,exact,unknown
+BLZ_000161,P11403,BLZ,Our Lady of the Way Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,23,urban,17.548532,-88.297967,official_emis,exact,unknown
+BLZ_000162,S21002,BLZ,Our lady of Mount Carmel High School,,2|3,Secondary,public,Belize,Cayo,Cayo West,,urban,23,urban,17.0724036,-89.13514763,official_emis,exact,unknown
+BLZ_000163,S11001,BLZ,Pallotti High School,,2|3,Secondary,public,Belize,Belize,Caribbean Shores,,urban,30,urban,17.5050251,-88.1971102,official_emis,exact,unknown
+BLZ_000164,P19402,BLZ,Pancotto Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,12,rural,17.6308428,-88.3686216,official_emis,exact,unknown
+BLZ_000165,P30403,BLZ,Paraiso Government Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,21,peri_urban,18.40985129,-88.39463336,official_emis,exact,unknown
+BLZ_000166,P31408,BLZ,Patchakan RC Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,13,rural,18.40201008,-88.47301758,official_emis,exact,unknown
+BLZ_000167,P39450,BLZ,Presbyterian Day Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,12,rural,18.34980796,-88.49613895,official_emis,exact,unknown
+BLZ_000168,P31103,BLZ,Progresso RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,11,rural,18.23599445,-88.40945715,official_emis,exact,unknown
+BLZ_000169,P34403,BLZ,Progresso Zills SDA Primary,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,12,rural,18.23560771,-88.40501605,official_emis,exact,unknown
+BLZ_000170,S64101,BLZ,Providence SDA High School,,2|3,Secondary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.248588,-89.016305,official_emis,exact,unknown
+BLZ_000171,P63001,BLZ,Punta Gorda Methodist Primary,,1,Primary,public,Belize,,Toledo East,,urban,23,urban,16.101592,-88.801299,official_emis,exact,unknown
+BLZ_000172,P12004,BLZ,Queen Square Anglican Primary,,1,Primary,public,Belize,Belize,Mesopotamia,,urban,30,urban,17.49048,-88.1944353,official_emis,exact,unknown
+BLZ_000173,P19005,BLZ,Queen Street Baptist Primary School,,1,Primary,public,Belize,Belize,Fort George,,urban,30,urban,17.497816,-88.183864,official_emis,exact,unknown
+BLZ_000174,P30404,BLZ,Ranchito Government Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,21,peri_urban,18.3796863,-88.4122235,official_emis,exact,unknown
+BLZ_000175,P25401,BLZ,Raymond Sheppard Nazarene Primary School,,1,Primary,public,Belize,Cayo,Cayo South,,rural,23,urban,17.2585413,-88.7915227,official_emis,exact,unknown
+BLZ_000176,P56302,BLZ,Red Bank Christian School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,12,rural,16.61964,-88.56008,official_emis,exact,unknown
+BLZ_000177,P51302,BLZ,Richard Quinn RC Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,11,rural,16.65261144,-88.50952111,official_emis,exact,unknown
+BLZ_000178,S21001,BLZ,Sacred Heart College,,2|3,Secondary,public,Belize,Cayo,Cayo North East,,urban,23,urban,17.16106939,-89.07501095,official_emis,exact,unknown
+BLZ_000179,P61105,BLZ,Sacred Heart RC Primary School,,1,Primary,public,Belize,Toledo,Toledo East,,rural,12,rural,15.984,-89.105606,official_emis,exact,unknown
+BLZ_000180,P51004,BLZ,Sacred Heart RC Primary School,,1,Primary,public,Belize,,Dangriga,,urban,23,urban,16.9725543,-88.22269528,official_emis,exact,unknown
+BLZ_000181,P21005,BLZ,Sacred Heart RC Primary School-CYO,,1,Primary,public,Belize,Cayo,Cayo North East,,urban,23,urban,17.15722596,-89.07204999,official_emis,exact,unknown
+BLZ_000182,S10004,BLZ,Sadie Vernon Technical High School,,2|3,Secondary,public,Belize,Belize,Lake Independence,,urban,30,urban,17.501393,-88.200535,official_emis,exact,unknown
+BLZ_000183,P12304,BLZ,Saint Agnes Anglican Primary School,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,12,rural,17.343375,-88.55092,official_emis,exact,unknown
+BLZ_000184,P51201,BLZ,Saint Alphonsus RC Primary,,1,Primary,public,Belize,,Stann Creek West,,rural,22,urban,16.56613,-88.36658,official_emis,exact,unknown
+BLZ_000185,P22001,BLZ,Saint Andrew Anglican Primary School,,1,Primary,public,Belize,Cayo,Cayo North East,,urban,23,urban,17.162648,-89.07193407,official_emis,exact,unknown
+BLZ_000186,P22002,BLZ,Saint Ann's Anglican Primary School,,1,Primary,public,Belize,Cayo,Belmopan,,urban,23,urban,17.2498284,-88.7686522,official_emis,exact,unknown
+BLZ_000187,P51404,BLZ,Saint Augustine RC Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,11,rural,17.02708,-88.51212,official_emis,exact,unknown
+BLZ_000188,P22402,BLZ,Saint Barnabas Anglican Primary School,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,12,rural,17.1865311,-89.00141388,official_emis,exact,unknown
+BLZ_000189,P61003,BLZ,Saint Benedict RC Primary,,1,Primary,public,Belize,Toledo,Toledo East,,urban,12,rural,16.104267,-88.8175708,official_emis,exact,unknown
+BLZ_000190,S11002,BLZ,Saint Catherine Academy,,2|3,Secondary,public,Belize,,Fort George,,urban,30,urban,17.49654584,-88.18271036,official_emis,exact,unknown
+BLZ_000191,P60105,BLZ,Saint Cuthberts Primary School,,1,Primary,public,Belize,,Toledo East,,rural,11,rural,16.272939,-88.544527,official_emis,exact,unknown
+BLZ_000192,P21407,BLZ,Saint Edmund Campion Primary School,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,12,rural,17.2250142,-88.8571977,official_emis,exact,unknown
+BLZ_000193,P31002,BLZ,Saint Francis Xavier Primary School,,1,Primary,public,Belize,Corozal,Corozal Bay,,urban,23,urban,18.39089699,-88.38581614,official_emis,exact,unknown
+BLZ_000194,P21408,BLZ,Saint Francis Xavier RC Primary School-CYO,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,12,rural,17.18062135,-89.03596134,official_emis,exact,unknown
+BLZ_000195,P22401,BLZ,Saint Hilda's Anglican Primary School,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,12,rural,17.19352,-88.97925,official_emis,exact,unknown
+BLZ_000196,S21003,BLZ,Saint Ignatius High School,,2|3,Secondary,public,Belize,Cayo,Cayo Central,,urban,23,urban,17.15785688,-89.06653845,official_emis,exact,unknown
+BLZ_000197,P11007,BLZ,Saint Ignatius RC Primary School,,1,Primary,public,Belize,Belize,Queen Square,,urban,30,urban,17.49181137,-88.19226641,official_emis,exact,unknown
+BLZ_000198,P11008,BLZ,Saint John Vianney Primay School,,1,Primary,public,Belize,Belize,Queen Square,,urban,30,urban,17.48762349,-88.19853386,official_emis,exact,unknown
+BLZ_000199,P61103,BLZ,Saint John the Baptist RC Primary School,,1,Primary,public,Belize,Toledo,Toledo East,,rural,11,rural,16.047898,-89.001404,official_emis,exact,unknown
+BLZ_000200,P12006,BLZ,Saint John's Anglican Primary School,,1,Primary,public,Belize,Belize,Queen Square,,urban,30,urban,17.48887096,-88.19240187,official_emis,exact,unknown
+BLZ_000201,S11003,BLZ,Saint John's College,,2|3,Secondary,public,Belize,Belize,Caribbean Shores,,urban,30,urban,17.512349,-88.199187,official_emis,exact,unknown
+BLZ_000202,P52201,BLZ,Saint John's Memorial Anglican Primary School,,1,Primary,public,Belize,,Stann Creek West,,rural,22,urban,16.5212091,-88.3702958,official_emis,exact,unknown
+BLZ_000203,P21403,BLZ,Saint Joseph RC - Cotton Tree,,1,Primary,public,Belize,Cayo,Cayo South,,rural,12,rural,17.27624414,-88.71113398,official_emis,exact,unknown
+BLZ_000204,P11011,BLZ,Saint Joseph RC Primary,,1,Primary,public,Belize,Belize,Freetown,,urban,30,urban,17.50412008,-88.19197912,official_emis,exact,unknown
+BLZ_000205,P61102,BLZ,Saint Joseph RC Primary School,,1,Primary,public,Belize,,Toledo East,,rural,12,rural,15.999285,-88.918495,official_emis,exact,unknown
+BLZ_000206,P21103,BLZ,Saint Joseph RC-Duck Run 2,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,12,rural,17.24210234,-89.02372167,official_emis,exact,unknown
+BLZ_000207,P51403,BLZ,Saint Jude RC Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,12,rural,16.7983079,-88.3814957,official_emis,exact,unknown
+BLZ_000208,P21402,BLZ,Saint Jude RC Primary School-CYO,,1,Primary,public,Belize,Cayo,Cayo South,,rural,12,rural,17.243563,-88.8248689,official_emis,exact,unknown
+BLZ_000209,P13004,BLZ,Saint Luke Methodist Primary,,1,Primary,public,Belize,Belize,Lake Independence,,urban,30,urban,17.50100318,-88.20008709,official_emis,exact,unknown
+BLZ_000210,P21406,BLZ,Saint Margaret Mary RC Primary School,,1,Primary,public,Belize,Cayo,Cayo South,,rural,12,rural,17.08976851,-88.61246113,official_emis,exact,unknown
+BLZ_000211,P61110,BLZ,Saint Mark's RC Primary School,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.02241,-89.18041,official_emis,exact,unknown
+BLZ_000212,P21409,BLZ,Saint Martin De Porres RC Primary School-CYO,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,12,rural,17.22512812,-88.91261328,official_emis,exact,unknown
+BLZ_000213,P11012,BLZ,Saint Martin de Porres Primary School,,1,Primary,public,Belize,Belize,Lake Independence,,urban,30,urban,17.49932701,-88.20095059,official_emis,exact,unknown
+BLZ_000214,P20402,BLZ,Saint Martin's Government Primary School,,1,Primary,public,Belize,Cayo,Belmopan,,rural,23,urban,17.251379,-88.75874,official_emis,exact,unknown
+BLZ_000215,P12008,BLZ,Saint Mary's Anglican Primary School,,1,Primary,public,Belize,Belize,Fort George,,urban,30,urban,17.49564532,-88.18431715,official_emis,exact,unknown
+BLZ_000216,P52402,BLZ,Saint Matthew's Anglican Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,12,rural,16.99555047,-88.36676786,official_emis,exact,unknown
+BLZ_000217,P20403,BLZ,Saint Matthew's Government Primary School,,1,Primary,public,Belize,Cayo,Cayo South,,rural,12,rural,17.27657462,-88.64609264,official_emis,exact,unknown
+BLZ_000218,P41203,BLZ,Saint Michael RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,13,rural,17.8729365,-88.77296322,official_emis,exact,unknown
+BLZ_000219,P21404,BLZ,Saint Michael RC Primary,,1,Primary,public,Belize,Cayo,Belmopan,,urban,23,urban,17.23463967,-88.77944361,official_emis,exact,unknown
+BLZ_000220,P21106,BLZ,Saint Oscar Romero RC Primary School,,1,Primary,public,Belize,Cayo,Cayo South,,rural,13,rural,17.3363676,-88.8348297,official_emis,exact,unknown
+BLZ_000221,P32001,BLZ,Saint Paul's Anglican Primary School,,1,Primary,public,Belize,Corozal,Corozal Bay,,urban,23,urban,18.38881,-88.38893,official_emis,exact,unknown
+BLZ_000222,P61408,BLZ,Saint Paul's RC Primary School,,1,Primary,public,Belize,Toledo,Toledo East,,rural,12,rural,16.61176,-88.57989,official_emis,exact,unknown
+BLZ_000223,P61002,BLZ,Saint Peter Claver Primary School,,1,Primary,public,Belize,,Toledo East,,urban,23,urban,16.097638,-88.805684,official_emis,exact,unknown
+BLZ_000224,P42001,BLZ,Saint Peter's Anglican Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk Central,,urban,23,urban,18.082147,-88.561989,official_emis,exact,unknown
+BLZ_000225,P61402,BLZ,Saint Phillip RC Primary School,,1,Primary,public,Belize,Toledo,Toledo East,,rural,12,rural,16.12135,-88.7958,official_emis,exact,unknown
+BLZ_000226,P62102,BLZ,Saint Stephen's Anglican Primary School,,1,Primary,public,Belize,,Toledo East,,rural,12,rural,16.36225527,-88.48554268,official_emis,exact,unknown
+BLZ_000227,P11404,BLZ,Saint Therese RC Primary School,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,13,rural,17.56883699,-88.40152158,official_emis,exact,unknown
+BLZ_000228,P21411,BLZ,Saint Vincent Pallotti R.C. Primary School,,1,Primary,public,Belize,Cayo,Cayo South,,rural,12,rural,17.20926,-88.94246,official_emis,exact,unknown
+BLZ_000229,P30405,BLZ,San Antonio Government Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,23,urban,18.40240233,-88.39945084,official_emis,exact,unknown
+BLZ_000230,P41202,BLZ,San Antonio RC Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,12,rural,18.13153996,-88.67571368,official_emis,exact,unknown
+BLZ_000231,P21202,BLZ,San Antonio RC Primary School-CYO,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,13,rural,17.07892029,-89.02133539,official_emis,exact,unknown
+BLZ_000232,P29201,BLZ,San Antonio United Pentecostal Primary School,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,12,rural,17.08143009,-89.02493529,official_emis,exact,unknown
+BLZ_000233,P61111,BLZ,San Benito Poite RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.112779,-89.193061,official_emis,exact,unknown
+BLZ_000234,P40105,BLZ,San Carlos Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,12,rural,17.71818396,-88.6545792,official_emis,exact,unknown
+BLZ_000235,P41404,BLZ,San Estevan RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,13,rural,18.14988835,-88.51120427,official_emis,exact,unknown
+BLZ_000236,P60202,BLZ,San Felipe Government Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.132167,-88.908473,official_emis,exact,unknown
+BLZ_000237,P41004,BLZ,San Francisco RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk Central,,urban,23,urban,18.08217814,-88.56684802,official_emis,exact,unknown
+BLZ_000238,P61203,BLZ,San Francisco de Jeronimo Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.207806,-89.139379,official_emis,exact,unknown
+BLZ_000239,P60109,BLZ,San Isidro Government Primary,,1,Primary,public,Belize,Toledo,Toledo East,,rural,13,rural,16.50802041,-88.54402495,official_emis,exact,unknown
+BLZ_000240,P31409,BLZ,San Joaquin RC Primary School,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,13,rural,18.34877894,-88.44273109,official_emis,exact,unknown
+BLZ_000241,P40403,BLZ,San Jose Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,13,rural,18.19686419,-88.56918512,official_emis,exact,unknown
+BLZ_000242,P41405,BLZ,San Jose Nuevo Palmar RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk East,,rural,12,rural,18.06054628,-88.56682743,official_emis,exact,unknown
+BLZ_000243,P61112,BLZ,San Jose RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.265834,-89.094874,official_emis,exact,unknown
+BLZ_000244,P21410,BLZ,San Jose Succotz RC Primary,,1,Primary,public,Belize,Cayo,Cayo West,,rural,23,urban,17.0840244,-89.1270446,official_emis,exact,unknown
+BLZ_000245,P51301,BLZ,San Juan Bosco Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,13,rural,16.56906681,-88.5225968,official_emis,exact,unknown
+BLZ_000246,P49401,BLZ,San Lazaro Methodist Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,12,rural,18.03806787,-88.6604248,official_emis,exact,unknown
+BLZ_000247,P41406,BLZ,San Lazaro RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,12,rural,18.0389503,-88.66156877,official_emis,exact,unknown
+BLZ_000248,P61119,BLZ,San Lucas RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,11,rural,16.079023,-89.098857,official_emis,exact,unknown
+BLZ_000249,P41407,BLZ,San Luis RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,11,rural,18.19559373,-88.6033673,official_emis,exact,unknown
+BLZ_000250,P61404,BLZ,San Luis Rey RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.2438451,-89.02592314,official_emis,exact,unknown
+BLZ_000251,P61113,BLZ,San Marcos RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.215832,-88.903861,official_emis,exact,unknown
+BLZ_000252,P21107,BLZ,San Marcos RC Primary-CYO,,1,Primary,public,Belize,Cayo,Cayo Central,,rural,12,rural,17.26439879,-88.97949083,official_emis,exact,unknown
+BLZ_000253,P61405,BLZ,San Miguel RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.293903,-88.933802,official_emis,exact,unknown
+BLZ_000254,P31410,BLZ,San Narciso RC Primary,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,12,rural,18.3015616,-88.5245933,official_emis,exact,unknown
+BLZ_000255,P40406,BLZ,San Pablo Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,12,rural,18.21294123,-88.56616715,official_emis,exact,unknown
+BLZ_000256,P41408,BLZ,San Pablo RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,12,rural,18.2064422,-88.567178,official_emis,exact,unknown
+BLZ_000257,P61406,BLZ,San Pedro Columbia RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.2715188,-88.9574563,official_emis,exact,unknown
+BLZ_000258,P30406,BLZ,San Pedro Government Primary,,1,Primary,public,Belize,Corozal,Corozal North,,rural,12,rural,18.3387883,-88.4941397,official_emis,exact,unknown
+BLZ_000259,S19002,BLZ,San Pedro High School,,2|3,Secondary,public,Belize,Belize,Belize Rural North,,urban,13,rural,17.924698,-87.95937,official_emis,exact,unknown
+BLZ_000260,P11004,BLZ,San Pedro RC Primary,,1,Primary,public,Belize,Belize,Belize Rural North,,urban,13,rural,17.917537,-87.963401,official_emis,exact,unknown
+BLZ_000261,P41204,BLZ,San Roman RC Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,12,rural,18.1920356,-88.64116966,official_emis,exact,unknown
+BLZ_000262,P61114,BLZ,San Vicente RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.239615,-89.199978,official_emis,exact,unknown
+BLZ_000263,P31411,BLZ,San Victor RC Primary,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,12,rural,18.26100978,-88.57569464,official_emis,exact,unknown
+BLZ_000264,P60204,BLZ,Santa Ana Government School,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.109247,-88.953262,official_emis,exact,unknown
+BLZ_000265,P34410,BLZ,Santa Clara SDA Primary School,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,13,rural,18.29511,-88.50938,official_emis,exact,unknown
+BLZ_000266,P31412,BLZ,Santa Clara/San Roman RC Primary,,1,Primary,public,Belize,Corozal,Corozal South West,,rural,13,rural,18.29669215,-88.50876282,official_emis,exact,unknown
+BLZ_000267,P20006,BLZ,Santa Cruz Government Primary,,1,Primary,public,Belize,Cayo,Cayo Central,,urban,23,urban,17.15926993,-89.05149304,official_emis,exact,unknown
+BLZ_000268,P40102,BLZ,Santa Cruz Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,12,rural,18.1138973,-88.7086599,official_emis,exact,unknown
+BLZ_000269,P50105,BLZ,Santa Cruz Government Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,13,rural,16.69997,-88.42847,official_emis,exact,unknown
+BLZ_000270,P61115,BLZ,Santa Cruz RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.233619,-89.077084,official_emis,exact,unknown
+BLZ_000271,P29003,BLZ,Santa Elena Baptist Primary,,1,Primary,public,Belize,Cayo,Cayo North East,,urban,23,urban,17.16207,-89.06293,official_emis,exact,unknown
+BLZ_000272,P61116,BLZ,Santa Elena RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.229817,-89.108217,official_emis,exact,unknown
+BLZ_000273,P21007,BLZ,Santa Elena RC Primary-CYO,,1,Primary,public,Belize,Cayo,Cayo Central,,urban,23,urban,17.16585938,-89.05920476,official_emis,exact,unknown
+BLZ_000274,P21301,BLZ,Santa Familia RC Primary,,1,Primary,public,Belize,Cayo,Cayo North East,,rural,12,rural,17.18958469,-89.07090356,official_emis,exact,unknown
+BLZ_000275,P40103,BLZ,Santa Martha Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk East,,rural,11,rural,18.01564334,-88.50202443,official_emis,exact,unknown
+BLZ_000276,P36401,BLZ,Santa Rita Christian Primary,,1,Primary,public,Belize,Corozal,Corozal North,,urban,23,urban,18.40318903,-88.39524163,official_emis,exact,unknown
+BLZ_000277,P61117,BLZ,Santa Teresa RC Primary,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.13597,-89.053362,official_emis,exact,unknown
+BLZ_000278,P31104,BLZ,Sarteneja La Inmaculada R.C. Primary School,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,13,rural,18.3540657,-88.138155,official_emis,exact,unknown
+BLZ_000279,P35101,BLZ,Sarteneja Nazarene Primary,,1,Primary,public,Belize,Corozal,Corozal South East,,rural,13,rural,18.3552006,-88.1418114,official_emis,exact,unknown
+BLZ_000280,P54101,BLZ,Shiloh SDA Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,22,urban,16.53742191,-88.41591046,official_emis,exact,unknown
+BLZ_000281,P53402,BLZ,Silk Grass Methodist Primary School,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,13,rural,16.88601661,-88.33807126,official_emis,exact,unknown
+BLZ_000282,P61205,BLZ,Silver Creek RC Primary School,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.279107,-88.890458,official_emis,exact,unknown
+BLZ_000283,P53201,BLZ,Sittee River Methodist Primary,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,12,rural,16.821919,-88.3207051,official_emis,exact,unknown
+BLZ_000284,P56001,BLZ,Solid Rock Christian Academy,,1,Primary,public,Belize,Stann Creek,Dangriga,,urban,23,urban,16.95860631,-88.22855755,official_emis,exact,unknown
+BLZ_000285,P44001,BLZ,Solomon's SDA Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk East,,urban,21,peri_urban,18.06702095,-88.57057363,official_emis,exact,unknown
+BLZ_000286,S59001,BLZ,Stann Creek Ecumenical College,,2|3,Secondary,public,Belize,Stann Creek,Dangriga,,urban,23,urban,16.96301332,-88.22789998,official_emis,exact,unknown
+BLZ_000287,P10001,BLZ,Stella Maris Special Education and Life Skills Learning Center,,1,Primary,public,Belize,Belize,Freetown,,urban,30,urban,17.50525551,-88.19594997,official_emis,exact,unknown
+BLZ_000288,P61118,BLZ,Sunday Wood RC Primary School,,1,Primary,public,Belize,Toledo,Toledo East,,rural,12,rural,16.038796,-89.033344,official_emis,exact,unknown
+BLZ_000289,P19006,BLZ,The Salvation Army Primary School,,1,Primary,public,Belize,Belize,Mesopotamia,,urban,30,urban,17.4948832,-88.19011456,official_emis,exact,unknown
+BLZ_000290,S69001,BLZ,Toledo Community College,,2|3,Secondary,public,Belize,,Toledo East,,urban,21,peri_urban,16.10511058,-88.80636306,official_emis,exact,unknown
+BLZ_000291,P40405,BLZ,Trial Farm Government Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,23,urban,18.09814363,-88.56322477,official_emis,exact,unknown
+BLZ_000292,P40404,BLZ,Trinidad Government Primary,,1,Primary,public,Belize,Orange Walk,Orange Walk North,,rural,23,urban,18.09826674,-88.56340216,official_emis,exact,unknown
+BLZ_000293,P13005,BLZ,Trinity Methodist Primary School,,1,Primary,public,Belize,Belize,Freetown,,urban,30,urban,17.50994269,-88.19171817,official_emis,exact,unknown
+BLZ_000294,P60107,BLZ,Trio Government Primary School,,1,Primary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.5156931,-88.636284,official_emis,exact,unknown
+BLZ_000295,S67102,BLZ,Tumul K’in Center of Learning,,2|3,Secondary,public,Belize,Toledo,Toledo West,,rural,12,rural,16.19433469,-89.04781453,official_emis,exact,unknown
+BLZ_000296,P50104,BLZ,United Community Primary,,1,Primary,public,Belize,Stann Creek,Stann Creek West,,rural,12,rural,16.6574202,-88.4706642,official_emis,exact,unknown
+BLZ_000297,P20002,BLZ,United Evergreen Primary,,1,Primary,public,Belize,Cayo,Belmopan,,urban,23,urban,17.25241865,-88.76668934,official_emis,exact,unknown
+BLZ_000298,P19007,BLZ,Unity Presbyterian Primary,,1,Primary,public,Belize,Belize,Collet,,urban,30,urban,17.49697505,-88.20656984,official_emis,exact,unknown
+BLZ_000299,P26101,BLZ,Valley of Peace Christian Primary School,,1,Primary,public,Belize,Cayo,Cayo South,,rural,13,rural,17.33256207,-88.83483796,official_emis,exact,unknown
+BLZ_000300,P25402,BLZ,Victorious Nazarene Primary School,,1,Primary,public,Belize,Cayo,Cayo West,,rural,12,rural,17.0786647,-89.1242145,official_emis,exact,unknown
+BLZ_000301,S13001,BLZ,Wesley College,,2|3,Secondary,public,Belize,Belize,Albert,,urban,30,urban,17.48728613,-88.19032725,official_emis,exact,unknown
+BLZ_000302,P13006,BLZ,Wesley Lower Primary School,,1,Primary,public,Belize,Belize,Albert,,urban,30,urban,17.49112395,-88.18768355,official_emis,exact,unknown
+BLZ_000303,P13008,BLZ,Wesley Upper Primary School,,1,Primary,public,Belize,Belize,Mesopotamia,,urban,30,urban,17.4902671,-88.1948254,official_emis,exact,unknown
+BLZ_000304,P31413,BLZ,Xaibe RC Primary School,,1,Primary,public,Belize,Corozal,Corozal North,,rural,13,rural,18.38767595,-88.43043873,official_emis,exact,unknown
+BLZ_000305,P41409,BLZ,Yo Creek Sacred Heart RC Primary School,,1,Primary,public,Belize,Orange Walk,Orange Walk South,,rural,13,rural,18.0908838,-88.6367919,official_emis,exact,unknown
+BLZ_000306,P13202,BLZ,Zion Park Methodist Primary School,,1,Primary,public,Belize,Belize,Belize Rural North,,rural,11,rural,17.814806,-88.309915,official_emis,exact,unknown
+BLZ_000307,P54001,BLZ,Zion SDA Primary School,,1,Primary,public,Belize,Stann Creek,Dangriga,,urban,23,urban,16.96474198,-88.22070717,official_emis,exact,unknown
