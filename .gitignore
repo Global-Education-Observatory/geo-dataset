@@ -5,3 +5,4 @@ releases/
 *__pycache__*
 data
 geo_paper_draft.docx
+*.ipynb
