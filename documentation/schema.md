@@ -133,7 +133,7 @@ One row per school × year · Captures educational output indicators.
 
 > Outcomes data is the sparsest dimension in LMIC EMIS systems. Only include rows where data is genuinely school-level — do not impute national or provincial averages down to the school level.
 
-| Column | Type | Required | NA Rule | Definition | Standard |
+<!-- | Column | Type | Required | NA Rule | Definition | Standard |
 |--------|------|----------|---------|------------|----------|
 | `geo_id` | String | Yes | Never null | Project-assigned unique school identifier. Foreign key to geo table. | Project standard |
 | `year` | Integer | Yes | Never null | Academic year from which outcomes are reported. Document the convention used in the harmonization note. | UIS survey convention |
@@ -142,7 +142,25 @@ One row per school × year · Captures educational output indicators.
 | `dropout_rate` | Float | No | NA if not collected | Proportion of students enrolled in grade g who are neither promoted nor retained the following year. Expressed as proportion (0.0–1.0). Flag in harmonization note whether sourced directly or computed as `1 − promotion_rate − repetition_rate`. | UIS Indicator: DROP |
 | `completion_rate` | Float | No | NA if not collected | Proportion of students who complete the final grade of the school's ISCED level. Expressed as proportion (0.0–1.0). | UIS Indicator: COMP |
 | `gross_intake_ratio` | Float | No | NA if not collected | Ratio of new entrants in first grade to the population of official primary entry age. Can exceed 1.0 due to over-age entrants. Only include if explicitly provided by source. | UIS Indicator: GIR |
-| `outcome_reference_grade` | String | No | NA if outcomes not collected | Grade or level to which outcome rates refer. Use national grade notation (e.g., `Grade 6`, `CM2`) or `all_grades` if averaged across all grades. | Project standard |
+| `outcome_reference_grade` | String | No | NA if outcomes not collected | Grade or level to which outcome rates refer. Use national grade notation (e.g., `Grade 6`, `CM2`) or `all_grades` if averaged across all grades. | Project standard | -->
+
+
+| Column | Type | Required | NA Rule | Definition | Standard |
+|--------|------|----------|---------|------------|----------|
+| `geo_id` | String | Yes | Never null | Project-assigned unique school identifier. Foreign key to geo table. | Project standard |
+| `year` | Integer | Yes | Never null | Academic year from which outcomes are reported. Document the convention used in the harmonization note. | UIS survey convention |
+| `promotion_rate` | Float | No | NA if not collected | Proportion of students in matricula final who were promoted. Computed as aprobados / matricula_final. Expressed as proportion (0.0–1.0). | Cameron, EPDC (2005) |
+| `promotion_rate_male` | Float | No | NA if not disaggregated | Male students promoted as proportion of male matricula final. | Cameron, EPDC (2005) |
+| `promotion_rate_female` | Float | No | NA if not disaggregated | Female students promoted as proportion of female matricula final. | Cameron, EPDC (2005) |
+| `repetition_rate` | Float | No | NA if not collected | Proportion of students in matricula final who repeated. Computed as reprobados / matricula_final. Expressed as proportion (0.0–1.0). | Cameron, EPDC (2005) |
+| `repetition_rate_male` | Float | No | NA if not disaggregated | Male students repeating as proportion of male matricula final. | Cameron, EPDC (2005) |
+| `repetition_rate_female` | Float | No | NA if not disaggregated | Female students repeating as proportion of female matricula final. | Cameron, EPDC (2005) |
+| `dropout_rate` | Float | No | NA if not collected | Proportion of students in matricula inicial who dropped out mid-year. Computed as EXC INTRAT / matricula_inicial. Negative exclusion values (net inflow due to transfers) are clamped to zero at grade level before aggregation. Rates exceeding 1.0 or where matricula_inicial = 0 set to NA. Expressed as proportion (0.0–1.0). | MEP Departamento de Análisis Estadístico; Cameron, EPDC (2005) |
+| `dropout_rate_male` | Float | No | NA if not disaggregated | Male students dropping out as proportion of male matricula inicial. Same clamping and NA rules as dropout_rate. | MEP Departamento de Análisis Estadístico; Cameron, EPDC (2005) |
+| `dropout_rate_female` | Float | No | NA if not disaggregated | Female students dropping out as proportion of female matricula inicial. Same clamping and NA rules as dropout_rate. | MEP Departamento de Análisis Estadístico; Cameron, EPDC (2005) |
+| `completion_rate` | Float | No | NA if not collected | Proportion of students who complete the final grade of the school's ISCED level. Expressed as proportion (0.0–1.0). | UIS Indicator: COMP |
+| `completion_rate_male` | Float | No | NA if not collected | Proportion of male students who complete the final grade of the school's ISCED level. Expressed as proportion (0.0–1.0). | UIS Indicator: COMP |
+| `completion_rate_female` | Float | No | NA if not collected | Proportion of female students who complete the final grade of the school's ISCED level. Expressed as proportion (0.0–1.0). | UIS Indicator: COMP |
 
 ---
 
