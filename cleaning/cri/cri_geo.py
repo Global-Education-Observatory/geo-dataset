@@ -260,7 +260,7 @@ gdf = gpd.GeoDataFrame(
     crs="EPSG:4326"
 )
 gdf = join_admin_boundaries(gdf, iso3=ISO3, levels=[1, 2, 3])
-gdf = gdf[~gdf["adm1"].isna()]
+# gdf = gdf[~gdf["adm1"].isna()]
 
 # -- 7. Assign geo_id ---------------------------------------------------------
 gdf = gdf.sort_values("source_id").reset_index(drop=True)
