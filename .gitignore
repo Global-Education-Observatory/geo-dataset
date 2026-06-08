@@ -6,3 +6,5 @@ releases/
 data
 geo_paper_draft.docx
 *.ipynb
+*.pdf
+*.docx
