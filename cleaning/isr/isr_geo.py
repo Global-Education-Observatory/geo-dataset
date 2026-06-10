@@ -63,6 +63,7 @@ import numpy as np
 import geopandas as gpd
 import os
 import sys
+from shapely.geometry import Point
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "..", "pipeline"))
 from geo_boundaries import join_admin_boundaries
@@ -184,33 +185,53 @@ print(f"  No coordinate: {n_missing:,}")
 schools['coordinate_source'] = 'official_emis'
 schools.loc[schools['latitude'].isna(), 'coordinate_precision'] = 'unknown'
 
+
+# Build GeoDataFrame for schools with coords
+has_coord_mask = schools["latitude"].notna() & schools["longitude"].notna()
+gdf_coords = gpd.GeoDataFrame(
+    schools[has_coord_mask].copy(),
+    geometry=[
+        Point(lon, lat)
+        for lat, lon in zip(
+            schools.loc[has_coord_mask, "latitude"],
+            schools.loc[has_coord_mask, "longitude"],
+        )
+    ],
+    crs="EPSG:4326",
+)
+
+gdf_joined = join_admin_boundaries(gdf_coords, iso3=ISO3, levels=[1, 2])
+
+# Merge back into main schools df
+adm_cols = [c for c in ["adm1", "adm2"] if c in gdf_joined.columns]
+
+schools = schools.merge(
+    gdf_joined[['סמל מוסד'] + adm_cols],
+    on = 'סמל מוסד',
+    how = "left",
+)
+
+
+
 # ── ADM boundaries — GeoBoundaries spatial join ───────────────────────────────
 # GeoBoundaries does not provide boundary data for Israel (all ADM levels
 # return HTTP 403). adm1/adm2/adm3 are set to NA.
 # Source EMIS geographic columns are retained as supplementary fields below.
-print("\nAdmin boundaries: GeoBoundaries not available for ISR — adm1/adm2/adm3 set to NA")
+# print("\nAdmin boundaries: GeoBoundaries not available for ISR — adm1/adm2/adm3 set to NA")
 
 # ── Coordinate sanity check — drop points outside Israel bounding box ─────────
 # Broad box including West Bank: lat 29.4–33.4, lon 34.2–35.9
-before = len(schools)
-valid_coords = (
-    schools['latitude'].isna() |
-    (
-        (schools['latitude']  >= 29.0) & (schools['latitude']  <= 34.0) &
-        (schools['longitude'] >= 33.5) & (schools['longitude'] <= 36.5)
-    )
-)
-schools = schools[valid_coords].copy()
-dropped = before - len(schools)
-if dropped > 0:
-    print(f"  WARNING: Dropped {dropped} schools with coordinates outside bounding box")
-else:
-    print(f"  Coordinate sanity check: all points within bounding box")
+
+
+
 
 # ── sort and assign geo_id ────────────────────────────────────────────────────
 # Assigned after all cleaning, sorted alphabetically by school name
 schools = schools.sort_values('שם מוסד').reset_index(drop=True)
 schools['geo_id'] = [f"{ISO3}_{str(i+1).zfill(6)}" for i in range(len(schools))]
+
+schools = schools[schools["latitude"].notna() & schools["longitude"].notna()]
+
 
 # ── Assemble output ───────────────────────────────────────────────────────────
 geo = pd.DataFrame({
@@ -223,8 +244,8 @@ geo = pd.DataFrame({
     'school_type':           schools['_pikuach'],  # state / state-religious verbatim
     'sector':                'public',
     'adm0':                  'Israel',
-    'adm1':                  pd.NA,  # GeoBoundaries not available for ISR
-    'adm2':                  pd.NA,
+    'adm1':                  schools["adm1"],
+    'adm2':                  schools["adm2"],
     'adm3':                  pd.NA,
     'urban_rural':           pd.NA,  # not in source; GHSL pending
     'ghsl_smod_code':        pd.NA,
@@ -239,6 +260,11 @@ geo = pd.DataFrame({
     'src_local_authority':   schools['שם רשות'].astype(str).str.strip(),
     'src_locality':          schools['שם ישוב'].astype(str).str.strip(),
 })
+
+
+print("ADM 1 Value Counts: ")
+print(geo["adm1"].value_counts())
+
 
 # ── QA ────────────────────────────────────────────────────────────────────────
 print("\n=== ISR_geo QA ===")

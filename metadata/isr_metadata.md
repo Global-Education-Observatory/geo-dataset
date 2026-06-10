@@ -8,7 +8,7 @@ country: "Israel"
 iso3: "ISR"
 iso2: "IL"
 region: "Western Asia"
-last_updated: "2026-06-09"
+last_updated: "2026-06-10"
 prepared_by: "HB"
 
 dimensions_available:
@@ -17,8 +17,8 @@ dimensions_available:
   resources: false
   outcomes:  false
 
-school_count_total: 3085
-school_count_public: 3085
+school_count_total: 2864
+school_count_public: 2864
 year_range: "2011–2015"
 years_available: [2011, 2012, 2013, 2014, 2015]
 
@@ -28,20 +28,21 @@ sector_notes: >
   supervision tracks. Filtered to סוג מסגרת אירגונית = 'בית ספר' (schools),
   פיקוח NOT חרדי (state and state-religious supervision only), and
   סוג חינוך מוסד = 'רגיל' (regular education). After panel deduplication
-  (most recent year per school), 3,085 schools are retained.
-  
+  (most recent year per school) and exclusion of schools with no coordinates,
+  2,864 schools are retained.
+
   Israel operates four supervision tracks (פיקוח):
-    מ"מ (ממלכתי — state secular): 2,328 schools
-    חמ"ד (ממלכתי דתי — state religious): 757 schools
+    מ"מ (ממלכתי — state secular): 2,167 schools
+    חמ"ד (ממלכתי דתי — state religious): 697 schools
     חרדי (ultra-Orthodox): excluded
-  
+
   Ultra-Orthodox schools are excluded because, despite receiving some
   government funding, they operate under independent religious supervision,
   follow a non-state curriculum, and are not subject to standard MoE
   oversight. This is structurally different from the MPO subsidized
   schools retained in BGD, where government salary funding is channelled
   through a national EMIS with full registration and oversight.
-  
+
   Special education institutions (סוג חינוך מוסד = 'מיוחד') are excluded
   for cross-country consistency. Kindergartens (גן ילדים), colleges,
   yeshivas, seminaries, ulpanot, and other non-school institution types
@@ -115,7 +116,7 @@ The source is a panel (2011–2015). One row per school is retained using the
 most recent available year. Year distribution of retained rows:
 
 | Year | Schools |
-|------|---------|
+|------|---------| 
 | 2015 | 3,003 |
 | 2014 | 16 |
 | 2013 | 9 |
@@ -125,6 +126,12 @@ most recent available year. Year distribution of retained rows:
 The 82 schools with a retained year earlier than 2015 were not present in
 the 2015 data — likely schools that closed or were reclassified between
 their last observed year and 2015.
+
+### Coordinate exclusion
+221 schools (7.2% of the 3,085 post-filter schools) had no match in the
+MoE coordinate file and are excluded from the final geo table entirely,
+per the project-wide rule that schools with no coordinate are not retained.
+Final school count: 2,864.
 
 ### ISCED level mapping
 ISCED level assigned from grade range columns (משכבה = from grade,
@@ -143,48 +150,75 @@ spanning multiple levels.
 
 | isced_level | Count |
 |-------------|-------|
-| 1 | 1,490 |
-| 2\|3 | 874 |
-| 1\|2 | 376 |
-| 2 | 181 |
-| 3 | 142 |
+| 1 | 1,434 |
+| 2\|3 | 804 |
+| 1\|2 | 343 |
+| 2 | 144 |
+| 3 | 120 |
 | 1\|2\|3 | 10 |
-| NA | 12 |
+| NA | 9 |
 
-The 12 schools with NA isced_level have grade ranges of 13–14 only
+The 9 schools with NA isced_level have grade ranges of 13–14 only
 (post-secondary edge cases that survived the בית ספר filter). These are a
 known schema violation; they are retained in the file but flagged here.
 
 ### Administrative hierarchy
-GeoBoundaries does not provide boundary data for Israel — all ADM levels
-(1–3) return HTTP 403. adm1, adm2, and adm3 are therefore set to NA for
-all schools. This is a known GeoBoundaries coverage gap, likely related to
-contested boundary classifications for Israeli-administered territories.
+adm1 and adm2 were assigned via spatial join to GeoBoundaries ADM1 and ADM2
+boundary polygons for ISR. GeoBoundaries returned data intermittently during
+processing (all levels returned HTTP 403 on initial checks; 6 ADM1 features
+and 15 ADM2 features were available on a subsequent run). adm3 is not
+available from GeoBoundaries for ISR.
+
+| Level | Features | Matched | Unmatched (NA) |
+|-------|----------|---------|----------------|
+| ADM1 | 6 | 2,471 | 393 |
+| ADM2 | 15 | 2,706 | 158 |
+| ADM3 | not available | — | — |
+
+adm1 distribution (matched schools):
+
+| adm1 | Count |
+|------|-------|
+| Central District | 655 |
+| Northern District | 598 |
+| Southern District | 437 |
+| Haifa | 329 |
+| Tel Aviv | 303 |
+| Jerusalem District | 149 |
+
+**West Bank schools and unmatched adm values:** 151 schools appear under
+the source EMIS district label יו"ש (יהודה ושומרון — Judea and Samaria).
+These are Israeli-administered schools in the West Bank, including Israeli
+settlements and schools in Area C. The MoE EMIS includes them under its
+jurisdiction, and their coordinates (confirmed by visual inspection) fall
+in the West Bank — east of Israel's internationally recognized boundary and
+outside the GeoBoundaries ADM polygons for ISR.
+
+As a result, these schools receive adm1 = NA and adm2 = NA from the
+GeoBoundaries spatial join, as the join correctly finds no containing
+polygon within Israel's recognized boundary. The remaining unmatched
+schools (393 − 151 = ~242 adm1 NA; 158 − ~151 = ~7 adm2 NA) are likely
+near-boundary misses.
+
+These 151 West Bank schools are retained in the dataset without modification,
+consistent with the project approach of using the source country's own EMIS
+without political boundary adjustment. Researchers conducting spatial analysis
+should be aware that these schools will not be captured by any standard
+country polygon for Israel and their adm fields will be NA.
 
 Source EMIS geographic columns are retained in a supplementary file
-(`isr_geo_supp_geography.csv`) alongside the canonical output:
+(`isr_geo_supp_geography.csv`) for reference:
 
 | Source column | Translation | Approximate equivalent |
 |---------------|-------------|------------------------|
 | מחוז גאוגרפי | Geographic district | adm1 (6 districts + יו"ש) |
-| שם רשות | Local authority name | adm2 (252 unique values) |
-| שם ישוב | Locality name | adm3 (500 unique values) |
-
-These columns are NOT used for adm1/adm2/adm3 in the canonical file, per
-project rule that all adm fields are assigned via GeoBoundaries spatial join.
-
-**Note on יו"ש (יהודה ושומרון):** 160 schools appear under the district
-label יו"ש (Judea and Samaria / West Bank). These are Israeli-administered
-schools in the West Bank and are included in the MoE EMIS. They are
-retained in the dataset with no special flag, consistent with the approach
-of using the source country's own administrative data without political
-boundary modification. Researchers should be aware of this when using
-adm-level aggregations from the supplementary geography file.
+| שם רשות | Local authority name | adm2 |
+| שם ישוב | Locality name | adm3 |
 
 ### Coordinate construction
 Coordinates taken directly from the MoE coordinate file (isr_moe_coordinates).
 The source columns UTM_X / UTM_Y contain WGS84 decimal degrees despite the
-column naming. ITM columns (Israeli grid) are not used.
+column naming. ITM columns (Israeli grid, EPSG:2039) are not used.
 
 `coordinate_source = 'official_emis'` for all schools.
 
@@ -194,33 +228,34 @@ column naming. ITM columns (Israeli grid) are not used.
 |--------------------|---------------------|-------|
 | גבוהה מאוד (very high) | exact | ~1,900 |
 | גבוהה (high) | exact | ~914 |
-| בינונית (medium) | approximate | ~50 |
+| בינונית (medium) | approximate | 50 |
 | נמוכה (low) | approximate | 0 in matched set |
-| No match in coordinate file | unknown | 221 |
 
 | coordinate_precision | Count |
 |---------------------|-------|
 | exact | 2,814 |
 | approximate | 50 |
-| unknown (no coordinate) | 221 |
 
-All 2,864 geocoded schools passed a bounding box sanity check
+All 2,864 schools passed a bounding box sanity check
 (lat 29.0–34.0, lon 33.5–36.5). No out-of-bounds coordinates found.
 
 ### Known issues
-- adm1/adm2/adm3 are NA for all schools — GeoBoundaries not available for ISR.
-  Source EMIS geography retained in supplementary file.
-- 221 schools (7.2%) have no coordinate match in the coordinate file.
-- 12 schools have NA isced_level (grade range 13–14 only; post-secondary).
+- adm1 = NA for 393 schools, adm2 = NA for 158 schools — primarily West Bank
+  schools (n≈151) outside GeoBoundaries ISR polygons, plus near-boundary misses.
+  adm3 not available from GeoBoundaries for ISR. Source EMIS geography retained
+  in supplementary file.
+- 221 schools excluded due to no coordinate match (7.2% of post-filter schools).
+- 9 schools have NA isced_level (grade range 13–14 only; post-secondary edge cases).
 - school_name_romanized is NA for all schools — bulk romanization of Hebrew
-  school names is pending. The ISO 843 / Academy of the Hebrew Language
-  romanization standard would be appropriate.
+  school names is pending. The Academy of the Hebrew Language romanization
+  standard would be appropriate.
 - school_type values (ממ / חמד) are the פיקוח field with quotation marks
   stripped. Full Hebrew labels are ממלכתי and ממלכתי דתי respectively.
-- 160 schools are in the West Bank (adm1 source value יו"ש) and are
-  included without modification.
 - Data reflects 2011–2015 only. Schools opened or closed after 2015 are
   not represented.
+- GeoBoundaries returned HTTP 403 for all ISR ADM levels on initial checks
+  during processing; data was available on a subsequent run. GeoBoundaries
+  coverage for ISR should be verified before any re-run of this script.
 
 ---
 
@@ -261,6 +296,11 @@ was not accessible during data collection. Flagged for future work.
 - `geo_id` assigned as ISR_{zero-padded integer} sorted alphabetically by
   school name (שם מוסד) to ensure reproducible ID assignment across re-runs.
 - Panel deduplication uses most-recent-year row per school.
+- Schools with no coordinate match excluded entirely (n=221), per project-wide
+  rule that schools with no coordinate are not retained in the geo table.
 
 ### Change log
 2026-06-09 — Initial file created
+2026-06-10 — Updated: school count corrected to 2,864 after coordinate exclusion;
+             adm1/adm2 populated via GeoBoundaries (intermittent availability noted);
+             West Bank school handling documented; ISCED and coordinate counts updated
