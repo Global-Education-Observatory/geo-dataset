@@ -83,8 +83,15 @@ Date: 2026-06-10
 
 import os
 import sys
-import pandas as pd
 import numpy as np
+import pandas as pd
+import geopandas as gpd
+from shapely.geometry import Point
+
+# Allow importing shared pipeline utilities
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", "..", "pipeline"))
+from geo_boundaries import join_admin_boundaries
+
 
 # ── Paths ─────────────────────────────────────────────────────────────────
 SOURCE_FILE = "/Users/heatherbaier/Documents/research/geo/sources/LBY/reach_lby_nationalschoolsassessment_complete_db_reliable__not_reliable_18oct2012.csv"
@@ -180,7 +187,7 @@ def build_isced(row):
 df["isced_level"] = df.apply(build_isced, axis=1)
 
 # ── adm1 from province code ────────────────────────────────────────────────
-df["adm1"] = df["QII_1Province"].map(PROVINCE_MAP)
+# df["adm1"] = df["QII_1Province"].map(PROVINCE_MAP)
 
 # ── Status ────────────────────────────────────────────────────────────────
 df["status"] = df["Q1_2scheduledToBegin"].map(STATUS_MAP).fillna("unknown")
@@ -231,18 +238,11 @@ def build_type_label(row):
 # Simpler approach: build from actual notna flags directly
 def build_school_type(row):
     parts = []
-    if row["Q1_1LevelofSchoolPrimary"].notna() if hasattr(row["Q1_1LevelofSchoolPrimary"], '__class__') else False:
-        parts.append("Primary")
-    if row["Q1_1LevelofSchoolPrep"] is not None and not pd.isna(row["Q1_1LevelofSchoolPrep"]):
-        parts.append("Preparatory")
-    if row["Q1_1aMedSciences"] is not None and not pd.isna(row["Q1_1aMedSciences"]):
-        parts.append("Secondary (Medical Sciences)")
-    if row["Q1_1bEngSciences"] is not None and not pd.isna(row["Q1_1bEngSciences"]):
-        parts.append("Secondary (Engineering Sciences)")
-    if row["Q1_1cEconSciences"] is not None and not pd.isna(row["Q1_1cEconSciences"]):
-        parts.append("Secondary (Economic Sciences)")
-    # If secondary flag set but no specialisation column caught above,
-    # append generic Secondary label
+    if not pd.isna(row["Q1_1LevelofSchoolPrimary"]): parts.append("Primary")
+    if not pd.isna(row["Q1_1LevelofSchoolPrep"]):    parts.append("Preparatory")
+    if not pd.isna(row["Q1_1aMedSciences"]):         parts.append("Secondary (Medical Sciences)")
+    if not pd.isna(row["Q1_1bEngSciences"]):         parts.append("Secondary (Engineering Sciences)")
+    if not pd.isna(row["Q1_1cEconSciences"]):        parts.append("Secondary (Economic Sciences)")
     if row["_has_sec"] and not any("Secondary" in p for p in parts):
         parts.append("Secondary")
     return "|".join(parts) if parts else pd.NA
@@ -251,9 +251,16 @@ out["school_type"] = df.apply(build_school_type, axis=1)
 
 out["sector"] = "public"
 out["adm0"]   = "Libya"
-out["adm1"]   = df["adm1"]
-out["adm2"]   = pd.NA   # mantika numeric codes — no name lookup available
+# out["adm1"]   = df["adm1"]
+# out["adm2"]   = pd.NA   # mantika numeric codes — no name lookup available
 out["adm3"]   = pd.NA   # not available
+
+
+
+
+
+
+
 
 # urban_rural: no urban/rural classification in source
 out["urban_rural"]    = pd.NA
@@ -265,6 +272,37 @@ out["longitude"] = df["longitude"]
 out["coordinate_source"]    = "official_emis"
 out["coordinate_precision"] = "exact"
 out["status"] = df["status"]
+
+
+
+#################
+
+# Build GeoDataFrame for schools with coords
+has_coord_mask = out["latitude"].notna() & out["longitude"].notna()
+gdf_coords = gpd.GeoDataFrame(
+    out[has_coord_mask].copy(),
+    geometry=[
+        Point(lon, lat)
+        for lat, lon in zip(
+            out.loc[has_coord_mask, "latitude"],
+            out.loc[has_coord_mask, "longitude"],
+        )
+    ],
+    crs="EPSG:4326",
+)
+
+gdf_joined = join_admin_boundaries(gdf_coords, iso3=ISO3, levels=[1, 2])
+
+# Merge back into main schools df
+adm_cols = [c for c in ["adm1", "adm2"] if c in gdf_joined.columns]
+
+out = out.merge(
+    gdf_joined[["source_id"] + adm_cols],
+    on = "source_id",
+    how = "left",
+)
+
+#################
 
 # ── Supplementary reliability flag ────────────────────────────────────────
 # Not a schema column; written to a supplementary file alongside the geo table.
@@ -322,14 +360,14 @@ reliable_counts = out["_lby_reliable"].value_counts(dropna=False)
 print("Reliability breakdown:")
 print(reliable_counts.to_string())
 
-# ── Write supplementary reliability file ─────────────────────────────────
-supp = out[["geo_id", "source_id", "_lby_reliable"]].rename(
-    columns={"_lby_reliable": "lby_reliable"}
-)
-supp_path = OUTPUT_FILE.replace("lby_geo.csv", "lby_geo_reliability.csv")
-os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-supp.to_csv(supp_path, index=False)
-print(f"\nSupplementary reliability file saved: {supp_path}")
+# # ── Write supplementary reliability file ─────────────────────────────────
+# supp = out[["geo_id", "source_id", "_lby_reliable"]].rename(
+#     columns={"_lby_reliable": "lby_reliable"}
+# )
+# supp_path = OUTPUT_FILE.replace("lby_geo.csv", "lby_geo_reliability.csv")
+# os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+# supp.to_csv(supp_path, index=False)
+# print(f"\nSupplementary reliability file saved: {supp_path}")
 
 # ── Drop working columns and save ─────────────────────────────────────────
 GEO_COLS = [
