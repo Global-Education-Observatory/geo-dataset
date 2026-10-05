@@ -1,215 +1,318 @@
 """
 per_geo.py
 ----------
-Builds per_geo.csv conforming to the GEO Dataset canonical schema v1.0.
+Cleans the Peru Padron de Instituciones Educativas (Marco Censal 2024) to
+produce per_geo.csv conforming to the GEO Dataset canonical schema v1.0.
 
-Sources (MINEDU, Peru):
-    REGISTER  Numero de matriculados de Educacion Basica Regular (EBR) 2025
-              Nu_mero_de_matriculados_de_Educacio_n_Ba_sica_Regular__EBR__2025.csv
-              ';'-delimited, UTF-8 with BOM. One row per servicio educativo
-              (COD_MOD). Provides COD_MOD, CODLOCAL, names, level, gestion,
-              DAREACENSO. NLAT_IE / NLONG_IE in this file are truncated to
-              whole degrees and are NOT used.
-    COORDS    Padron de instituciones educativas, snapshot 10-09-2018
-              Relacio_n_de_instituciones_y_programas_educativos.csv
-              ','-delimited. Accented characters corrupted to U+FFFD in the
-              file itself, so only numeric fields (cod_mod, anexo, codlocal,
-              nlat_ie, nlong_ie) are used from it.
+Source:
+    Ministerio de Educacion del Peru, Unidad de Estadistica (ESCALE)
+    Padron.dbf / marco censal, Censo Educativo 2024
+    https://escale.minedu.gob.pe  (Bases de datos > A. Censo Educativo > 2024)
 
 Unit of observation:
-    Servicio educativo (COD_MOD). A primaria and a secundaria sharing one
-    building are two rows with the same coordinates. COD_MOD is unique
-    within scope in the 2025 register.
+    One row per servicio educativo (COD_MOD + ANEXO). A single building
+    (CODLOCAL) or institution (CODINST) can host several services, so primary
+    and secondary in the same campus are separate rows. CODINST is carried as
+    source_id_institution (same pattern as Colombia).
 
 Scope:
-    NIV_MOD in {B0 Primaria, F0 Secundaria}
-    GESTION in {1 Publica de gestion directa, 2 Publica de gestion privada}
-      - gestion directa: Sector Educacion, Municipalidad, FF.AA.
-      - gestion privada = Convenio con Sector Educacion (Fe y Alegria,
-        parochial). State-funded teachers; included as public, same logic
-        as BGD MPO and BLZ Government Aided.
-    D_FORMA == 'Escolarizada'
-    Active only. The 2025 enrollment register lists operating servicios
-    only, so status = 'open' for all rows.
+    Public EBR primary and secondary only.
+      - GESTION starts with "Publica" (includes Publica de gestion privada,
+        i.e. Convenio schools, treated as public, same precedent as
+        Bangladesh MPO and Belize Government Aided)
+      - NIV_MOD in LEVEL_MAP below
+    Excluded: private, inicial (ISCED 0), EBA, EBE, superior, CETPRO.
 
 ISCED mapping:
-    B0 Primaria   -> 1
-    F0 Secundaria -> 2|3 (5-year cycle spans ISCED 2 and 3; no within-cycle
-                          split in the register; BLZ precedent)
+    Primaria   -> 1
+    Secundaria -> 2|3  (5 grades spanning ISCED 2 and 3, no within-secondary
+                        disaggregation, same convention as BLZ)
 
-Coordinates (two tiers, both MINEDU official EMIS points):
-    Tier 1  COD_MOD match to 2018 padron (anexo 0 row preferred)
-    Tier 2  CODLOCAL match to 2018 padron (servicio new since 2018 but in an
-            existing building; CODLOCAL is stable across snapshots for ~99%
-            of COD_MOD-matched servicios)
-    Unmatched servicios are dropped (no-imputation rule).
-    (0, 0) coordinates in the padron are treated as missing.
-    coordinate_source    = 'official_emis'
-    coordinate_precision = 'exact' if >= 4 decimal places in the padron
-                           string, else 'approximate'
+Coordinates:
+    NLAT_IE / NLONG_IE already WGS84 decimal degrees.
+    TIPOCOORD == 1 (519 rows in the full file) is a centro poblado centroid,
+    verified by one distinct point per CODCP_MED, so it maps to admin_centroid.
+    TIPOCOORD == 2 is a school point, provenance from FTE_LOCAL.
 
-Admin hierarchy:
-    adm1-adm3 from GeoBoundaries spatial join (standing rule). Schools that
-    fall outside every ADM1 polygon are dropped.
+OPEN ITEMS (need the Padron dictionary value lists)
+    - FTE_LOCAL MED_RIE / MED_REG mapped as official_emis / approximate
+      (not centroids, collection method undocumented)
+    - IMPUTADO (values 1, 2, 3) is not used in any mapping yet
+    - NIV_MOD codes below should be confirmed against D_NIV_MOD labels
+    - urban_rural codes confirmed from DAREACENSO labels, see QA print
+    - status has no source field, set to 'unknown'
 
 Author: HB
+Date: 2026-10-01
 """
 
 import os
 import sys
+import unicodedata
 
-import geopandas as gpd
 import numpy as np
 import pandas as pd
+from dbfread import DBF
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "..", "..", "pipeline"))
-from geo_boundaries import join_admin_boundaries
 
 # ── Paths ─────────────────────────────────────────────────────────────────
-SRC_DIR     = "/Users/heatherbaier/Documents/research/geo/sources/PER"
-REGISTER    = os.path.join(SRC_DIR, "Número de matriculados de Educación Básica Regular (EBR) 2025.csv")
-PADRON_2018 = os.path.join(SRC_DIR, "Relación de instituciones y programas educativos.csv")
-OUTPUT_FILE = "/Users/heatherbaier/Documents/research/geo/db/geo/per_geo.csv"
-
+SOURCE_FILE = "../../sources/PER/Padron.dbf"  # TODO confirm
+OUTPUT_FILE = "../../db/geo/per_geo.csv"
 ISO3 = "PER"
 
-ISCED_MAP  = {"B0": "1", "F0": "2|3"}
-URBAN_MAP  = {"Urbana": "urban", "Rural": "rural"}
-PUBLIC_GES = ["1", "2"]
+# ── Config ────────────────────────────────────────────────────────────────
+# Set STRICT = False to let unresolved FTE_LOCAL values (MED_RIE, MED_REG)
+# fall through to a provisional official_emis / approximate mapping.
+STRICT = True
+
+PUBLIC_GESTION = ["1", "2"]
+
+# NIV_MOD -> (ISCED, label). CONFIRM against D_NIV_MOD before trusting.
+LEVEL_MAP = {
+    "B0": "1",     # Primaria
+    "F0": "2|3",   # Secundaria
+}
+
+# FTE_LOCAL -> (coordinate_source, coordinate_precision)
+FTE_MAP = {
+    "MED_GPS":           ("gps_field", "exact"),
+    "UGEL_GPS":          ("gps_field", "exact"),
+    "UGELCENSO_GPS":     ("gps_field", "exact"),
+    "GPS_OTRAS_FUENTES": ("gps_field", "exact"),
+    "UBICACION_WEB":     ("official_emis", "approximate"),
+    "UBICACION_WEB_MED": ("official_emis", "approximate"),
+    # Ministry-sourced points, collection method undocumented. Not centroids
+    # (up to 6 distinct points per CODCP_MED, 41-45% shared-point rate, same as
+    # ordinary school points), so mapped conservatively as approximate.
+    "MED_RIE":           ("official_emis", "approximate"),
+    "MED_REG":           ("official_emis", "approximate"),
+}
+FTE_UNRESOLVED = set()  # add any FTE_LOCAL value here to make the script stop on it
+FTE_PROVISIONAL = ("official_emis", "approximate")
+
+GEO_COLS = [
+    "geo_id", "source_id", "country", "school_name", "school_name_romanized",
+    "isced_level", "school_type", "sector",
+    "adm0", "adm1", "adm2", "adm3",
+    "urban_rural", "ghsl_smod_code", "ghsl_urban_rural",
+    "latitude", "longitude", "coordinate_source", "coordinate_precision",
+    "status",
+]
+# Not in schema.md v1.0 but used in the project (Colombia). Appended last.
+EXTRA_COLS = ["source_id_institution"]
 
 
-def norm_code(s: pd.Series) -> pd.Series:
-    """Join key only: strip whitespace and leading zeros. source_id stays verbatim."""
-    return s.astype(str).str.strip().str.lstrip("0")
+def _norm(s):
+    """Uppercase, strip accents and whitespace. NaN stays NaN."""
+    if pd.isna(s):
+        return s
+    s = unicodedata.normalize("NFKD", str(s))
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    return s.strip().upper()
 
 
-def n_decimals(s: pd.Series) -> pd.Series:
-    """Number of decimal places in a coordinate string."""
-    return s.astype(str).str.split(".").str[1].str.len().fillna(0).astype(int)
+# cp850 bytes for a, e, i, o, u, n-tilde etc. as they appear when read as latin-1
+MOJIBAKE_MARKERS = "\u00a3\u00a2\u00a4\u00a5\u00a1\u00a0\u0082\u0090\u00b5"
 
 
-# ── 1. Load and filter register ──────────────────────────────────────────
-print("Loading 2025 register...")
-reg = pd.read_csv(REGISTER, sep=";", dtype=str, encoding="utf-8-sig")
-print(f"  Total rows: {len(reg)}")
+def fix_mojibake(s):
+    """
+    The Padron is a DOS-era dbf (code page 850). If it was read as latin-1 /
+    cp1252 the accents come out as e.g. 'P£blica de gesti¢n'. Re-encode and
+    decode to repair. Only strings containing the tell-tale characters are
+    touched, so text that is already correct is returned unchanged.
+    """
+    if pd.isna(s):
+        return s
+    if not any(ch in s for ch in MOJIBAKE_MARKERS):
+        return s
+    try:
+        return s.encode("latin-1").decode("cp850")
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        return s
 
-mask = (
-    reg["NIV_MOD"].isin(ISCED_MAP.keys())
-    & reg["GESTION"].isin(PUBLIC_GES)
-    & reg["D_FORMA"].eq("Escolarizada")
-)
-reg = reg[mask].copy()
-print(f"  Public escolarizada Primaria/Secundaria: {len(reg)}")
-print(f"  D_GES_DEP:\n{reg['D_GES_DEP'].value_counts().to_string()}")
-print(f"  Duplicate COD_MOD: {reg['COD_MOD'].duplicated().sum()}")
 
-reg["k_codmod"]   = norm_code(reg["COD_MOD"])
-reg["k_codlocal"] = norm_code(reg["CODLOCAL"])
+TEXT_COLS = ["CEN_EDU", "D_NIV_MOD", "D_GESTION", "DAREACENSO", "DIST", "DPTO", "PROV"]
 
-# ── 2. Load 2018 padron coordinates ──────────────────────────────────────
-print("\nLoading 2018 padron (coordinates only)...")
-pad = pd.read_csv(
-    PADRON_2018, dtype=str,
-    usecols=["cod_mod", "anexo", "codlocal", "nlat_ie", "nlong_ie"],
-)
-lat = pd.to_numeric(pad["nlat_ie"], errors="coerce")
-lon = pd.to_numeric(pad["nlong_ie"], errors="coerce")
-bad = lat.isna() | lon.isna() | (lat == 0) | (lon == 0)
-print(f"  Padron rows: {len(pad)}  |  missing or (0,0) coords dropped: {bad.sum()}")
-pad = pad[~bad].copy()
 
-pad["k_codmod"]   = norm_code(pad["cod_mod"])
-pad["k_codlocal"] = norm_code(pad["codlocal"])
-pad["anexo_n"]    = pd.to_numeric(pad["anexo"], errors="coerce")
+def load_source(path):
+    ext = os.path.splitext(path)[1].lower()
+    if ext == ".csv":
+        return pd.read_csv(path, dtype=str)
+    if ext in (".xlsx", ".xls"):
+        return pd.read_excel(path, dtype=str)
+    if ext == ".dbf":
+        import geopandas as gpd
+        return pd.DataFrame(iter(DBF(SOURCE_FILE, encoding="latin-1", ignore_missing_memofile=True))).replace("None", np.nan)
+    raise ValueError(f"Unsupported source format: {ext}")
 
-# One coordinate per COD_MOD (prefer anexo 0) and per CODLOCAL
-by_codmod = (pad.sort_values("anexo_n")
-                .drop_duplicates("k_codmod")[["k_codmod", "nlat_ie", "nlong_ie"]])
-by_codlocal = (pad.sort_values(["k_codlocal", "anexo_n"])
-                  .drop_duplicates("k_codlocal")[["k_codlocal", "nlat_ie", "nlong_ie"]])
 
-# ── 3. Two-tier coordinate join ──────────────────────────────────────────
-print("\nJoining coordinates...")
-t1 = reg.merge(by_codmod, on="k_codmod", how="left")
-t1["coord_tier"] = np.where(t1["nlat_ie"].notna(), "codmod", pd.NA)
+def build_geo(df):
+    """Everything up to (not including) the admin boundary join and geo_id."""
+    df = df.copy()
+    print(f"Source rows: {len(df)}")
+    for c in TEXT_COLS:
+        if c in df.columns:
+            df[c] = df[c].map(fix_mojibake)
 
-miss = t1["nlat_ie"].isna()
-t2 = (t1.loc[miss].drop(columns=["nlat_ie", "nlong_ie"])
-        .merge(by_codlocal, on="k_codlocal", how="left"))
-t2.index = t1.index[miss]
-t1.loc[miss, ["nlat_ie", "nlong_ie"]] = t2[["nlat_ie", "nlong_ie"]].values
-t1.loc[miss & t1["nlat_ie"].notna(), "coord_tier"] = "codlocal"
+    # ── Public filter ────────────────────────────────────────────────────
+    # Filter on the code, not the label (labels carry encoding noise).
+    # 1 = Publica de gestion directa, 2 = Publica de gestion privada (Convenio),
+    # 3 = Privada, confirmed from the value counts of the 2024 file.
+    print("\nGESTION value counts (check the public filter):")
+    print(df.groupby(["GESTION", "D_GESTION"], dropna=False).size())
+    unexpected = set(df["GESTION"].dropna().unique()) - set(PUBLIC_GESTION) - {"3"}
+    if unexpected:
+        raise ValueError(f"Unexpected GESTION codes {unexpected}, review the public filter")
+    df = df[df["GESTION"].isin(PUBLIC_GESTION)].copy()
+    print(f"After public filter: {len(df)}")
 
-print(f"  Tier 1 (COD_MOD):  {(t1['coord_tier'] == 'codmod').sum()}")
-print(f"  Tier 2 (CODLOCAL): {(t1['coord_tier'] == 'codlocal').sum()}")
-print(f"  No coordinate (dropped): {t1['nlat_ie'].isna().sum()}")
+    # ── Level filter ─────────────────────────────────────────────────────
+    print("\nNIV_MOD value counts among public services:")
+    print(df.groupby(["NIV_MOD", "D_NIV_MOD"], dropna=False).size())
+    df = df[df["NIV_MOD"].isin(LEVEL_MAP)].copy()
+    print(f"After level filter ({list(LEVEL_MAP)}): {len(df)}")
 
-df = t1[t1["nlat_ie"].notna()].copy()
-df["latitude"]  = pd.to_numeric(df["nlat_ie"])
-df["longitude"] = pd.to_numeric(df["nlong_ie"])
-df["coordinate_precision"] = np.where(
-    (n_decimals(df["nlat_ie"]) >= 4) & (n_decimals(df["nlong_ie"]) >= 4),
-    "exact", "approximate",
-)
+    # ── Identifiers ──────────────────────────────────────────────────────
+    # COD_MOD (7) + ANEXO (1), kept as strings so leading zeros survive
+    df["source_id"] = df["COD_MOD"].str.strip() + df["ANEXO"].str.strip()
+    df["source_id_institution"] = df["CODINST"].str.strip().replace("", np.nan)
+    dup = df["source_id"].duplicated().sum()
+    print(f"Duplicate source_id (retained verbatim): {dup}")
 
-# ── 4. Admin boundaries ──────────────────────────────────────────────────
-print("\nJoining admin boundaries from GeoBoundaries...")
-gdf = gpd.GeoDataFrame(
-    df, geometry=gpd.points_from_xy(df["longitude"], df["latitude"]), crs="EPSG:4326"
-)
-gdf = join_admin_boundaries(gdf, iso3=ISO3, levels=[1, 2, 3])
+    # ── Names, level, type, sector ───────────────────────────────────────
+    df["country"] = ISO3
+    df["school_name"] = df["CEN_EDU"].str.strip()
+    df["school_name_romanized"] = pd.NA
+    df["isced_level"] = df["NIV_MOD"].map(LEVEL_MAP)
+    df["school_type"] = df["D_NIV_MOD"].str.strip()
+    df["sector"] = "public"
+    df["adm0"] = "Peru"
 
-outside = gdf["adm1"].isna()
-print(f"  Outside ADM1 (dropped): {outside.sum()}")
-gdf = gdf[~outside].copy()
+    # ── Urban / rural (country-reported, not reclassified) ──────────────
+    ar = df["DAREACENSO"].map(_norm)
+    print("\nDAREACENSO value counts (confirm mapping):")
+    print(df.groupby(["AREA_CENSO", "DAREACENSO"], dropna=False).size())
+    ur_map = {"URBANA": "urban", "URBANO": "urban", "RURAL": "rural"}
+    df["urban_rural"] = ar.map(ur_map)
+    unmapped_ar = ar[ar.notna() & ~ar.isin(ur_map)].unique()
+    if len(unmapped_ar):
+        print(f"  WARNING: unmapped DAREACENSO values set to NA: {unmapped_ar}")
 
-# ── 5. Build output ──────────────────────────────────────────────────────
-print("\nBuilding output dataframe...")
-out = pd.DataFrame(index=gdf.index)
-out["source_id"]             = gdf["COD_MOD"].str.strip()      # verbatim
-out["country"]               = ISO3
-out["school_name"]           = gdf["CEN_EDU"].str.strip()
-out["school_name_romanized"] = pd.NA
-out["isced_level"]           = gdf["NIV_MOD"].map(ISCED_MAP)
-out["school_type"]           = gdf["D_NIV_MOD"].str.strip()
-out["sector"]                = "public"
-out["adm0"]                  = "Peru"
-out["adm1"]                  = gdf["adm1"]
-out["adm2"]                  = gdf["adm2"]
-out["adm3"]                  = gdf["adm3"]
-out["urban_rural"]           = gdf["DAREACENSO"].map(URBAN_MAP)
-out["ghsl_smod_code"]        = pd.NA
-out["ghsl_urban_rural"]      = pd.NA
-out["latitude"]              = gdf["latitude"]
-out["longitude"]             = gdf["longitude"]
-out["coordinate_source"]     = "official_emis"
-out["coordinate_precision"]  = gdf["coordinate_precision"]
-out["status"]                = "open"
+    # ── Coordinates ──────────────────────────────────────────────────────
+    df["latitude"] = pd.to_numeric(df["NLAT_IE"], errors="coerce")
+    df["longitude"] = pd.to_numeric(df["NLONG_IE"], errors="coerce")
 
-# geo_id assigned last, sorted by school name (source_id as tiebreak)
-out = out.sort_values(["school_name", "source_id"]).reset_index(drop=True)
-out.insert(0, "geo_id", [f"{ISO3}_{str(i + 1).zfill(6)}" for i in range(len(out))])
+    n0 = len(df)
+    df = df[df["latitude"].notna() & df["longitude"].notna()].copy()
+    print(f"\nDropped {n0 - len(df)} rows with missing coordinates")
 
-# ── 6. Validation ────────────────────────────────────────────────────────
-print("\n=== PER_geo QA ===")
-never_null = ["geo_id", "source_id", "country", "school_name", "isced_level",
-              "sector", "adm0", "coordinate_source", "coordinate_precision", "status"]
-for col in never_null:
-    n = out[col].isna().sum()
-    print(f"  {'WARNING' if n else 'OK'}: {col} — {n} nulls")
+    tipo = df["TIPOCOORD"].str.strip()
+    fte = df["FTE_LOCAL"].str.strip().replace("", np.nan)
 
-assert out["geo_id"].is_unique, "Duplicate geo_ids"
-print(f"  Duplicate source_id: {out['source_id'].duplicated().sum()}")
-print(f"  urban_rural unmapped: {out['urban_rural'].isna().sum()}")
+    # Blank FTE_LOCAL should coincide with centroid rows (TIPOCOORD == 1)
+    blank_not_centroid = (fte.isna() & (tipo != "1")).sum()
+    if blank_not_centroid:
+        raise ValueError(f"{blank_not_centroid} rows have blank FTE_LOCAL but TIPOCOORD != 1")
 
-print(f"\n  Total schools: {len(out)}")
-print(f"  isced_level:\n{out['isced_level'].value_counts().to_string()}")
-print(f"  coordinate_precision:\n{out['coordinate_precision'].value_counts().to_string()}")
-print(f"  urban_rural:\n{out['urban_rural'].value_counts(dropna=False).to_string()}")
-print(f"  adm1 (n = {out['adm1'].nunique()}):\n{out['adm1'].value_counts().to_string()}")
-print(f"  adm2 NA: {out['adm2'].isna().sum()}  |  adm3 NA: {out['adm3'].isna().sum()}")
+    unknown = set(fte.dropna().unique()) - set(FTE_MAP) - FTE_UNRESOLVED
+    if unknown:
+        raise ValueError(f"Unmapped FTE_LOCAL values, add to FTE_MAP: {unknown}")
 
-# ── 7. Save ──────────────────────────────────────────────────────────────
-os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-out.to_csv(OUTPUT_FILE, index=False)
-print(f"\n✓ Saved to {OUTPUT_FILE}")
+    unresolved_hit = (fte.isin(FTE_UNRESOLVED) & (tipo != "1")).sum()
+    if unresolved_hit and STRICT:
+        raise ValueError(
+            f"{unresolved_hit} rows use unresolved FTE_LOCAL values {FTE_UNRESOLVED}. "
+            "Define them from the Padron dictionary, or set STRICT = False to map "
+            "them provisionally to official_emis / approximate."
+        )
+    if unresolved_hit:
+        print(f"  WARNING: {unresolved_hit} rows mapped PROVISIONALLY (MED_RIE / MED_REG)")
+
+    def _coord(t, f):
+        if t == "1":
+            return ("admin_centroid", "admin_centroid")
+        if f in FTE_MAP:
+            return FTE_MAP[f]
+        return FTE_PROVISIONAL  # unresolved, only reached when STRICT is False
+
+    pairs = [_coord(t, f) for t, f in zip(tipo, fte)]
+    df["coordinate_source"] = [p[0] for p in pairs]
+    df["coordinate_precision"] = [p[1] for p in pairs]
+
+    # ── Status ───────────────────────────────────────────────────────────
+    # No status field in the Padron extract
+    df["status"] = "unknown"
+
+    # ── QA extras (IMPUTADO is not mapped yet) ───────────────────────────
+    print("\nFTE_LOCAL x IMPUTADO (to interpret IMPUTADO):")
+    print(pd.crosstab(fte.fillna("BLANK"), df["IMPUTADO"]))
+
+    return df
+
+
+def main():
+    print("Loading source data...")
+    raw = load_source(SOURCE_FILE)
+    df = build_geo(raw)
+
+    # ── Admin boundaries from GeoBoundaries (standing project rule) ──────
+    import geopandas as gpd
+    sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "pipeline"))
+    from geo_boundaries import join_admin_boundaries
+
+    gdf = gpd.GeoDataFrame(
+        df, geometry=gpd.points_from_xy(df["longitude"], df["latitude"]), crs="EPSG:4326"
+    )
+    print("\nJoining admin boundaries from GeoBoundaries...")
+    gdf = join_admin_boundaries(gdf, iso3=ISO3, levels=[1, 2, 3])
+
+    # Schools outside ADM1 are dropped, not nulled (Colombia precedent)
+    n0 = len(gdf)
+    gdf = gdf[gdf["adm1"].notna()].copy()
+    print(f"Dropped {n0 - len(gdf)} rows outside ADM1 boundaries")
+
+    # Report disagreement with the ministry's own district labels (validation stat)
+    if "DIST" in gdf.columns and gdf["adm3"].notna().any():
+        a = gdf["adm3"].map(_norm)
+        b = gdf["DIST"].map(_norm)
+        both = a.notna() & b.notna()
+        print(f"ADM3 vs ministry DIST name agreement: {(a[both] == b[both]).mean():.3f} "
+              f"(n={both.sum()}, exact string match, expect accent/naming noise)")
+
+    # ── geo_id assigned last, sorted by school name (tiebreak source_id) ─
+    gdf = gdf.sort_values(["school_name", "source_id"]).reset_index(drop=True)
+    gdf["geo_id"] = [f"{ISO3}_{str(i + 1).zfill(6)}" for i in range(len(gdf))]
+
+    gdf["ghsl_smod_code"] = pd.NA
+    gdf["ghsl_urban_rural"] = pd.NA
+
+    geo = pd.DataFrame(gdf)[GEO_COLS + EXTRA_COLS].copy()
+
+    # ── QA ───────────────────────────────────────────────────────────────
+    print("\n=== PER_geo QA ===")
+    print(f"Total rows: {len(geo)}")
+    never_null = ["geo_id", "source_id", "country", "school_name", "isced_level",
+                  "sector", "adm0", "coordinate_source", "coordinate_precision", "status"]
+    for col in never_null:
+        n = geo[col].isna().sum()
+        print(f"  {'WARNING' if n else 'OK'}: {col} nulls = {n}")
+    assert geo["geo_id"].is_unique, "Duplicate geo_ids"
+    assert geo["sector"].eq("public").all()
+    print("\nisced_level:\n", geo["isced_level"].value_counts())
+    print("\ncoordinate_source:\n", geo["coordinate_source"].value_counts())
+    print("\ncoordinate_precision:\n", geo["coordinate_precision"].value_counts())
+    print("\nurban_rural:\n", geo["urban_rural"].value_counts(dropna=False))
+    print("\nadm1:\n", geo["adm1"].value_counts().head(30))
+    print(f"\nsource_id_institution missing: {geo['source_id_institution'].isna().sum()}")
+
+    if len(geo) == 0:
+        raise RuntimeError("Zero rows after cleaning, not writing output")
+
+    os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+    geo.to_csv(OUTPUT_FILE, index=False)
+    print(f"\nSaved: {OUTPUT_FILE}")
+
+
+if __name__ == "__main__":
+    main()

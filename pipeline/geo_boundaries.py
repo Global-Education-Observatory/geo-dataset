@@ -33,18 +33,19 @@ def _fetch_boundary(iso3: str, level: int, timeout: int = 15) -> Optional[gpd.Ge
     Returns a GeoDataFrame in EPSG:4326, or None if not available.
     """
     url = GB_API.format(iso3=iso3.upper(), level=level)
-    try:
-        r = requests.get(url, timeout=timeout)
-        if r.status_code != 200 or not r.text.strip():
-            return None
-        data = r.json()
-        geojson_url = data.get("gjDownloadURL")
-        if not geojson_url:
-            return None
-        gdf = gpd.read_file(geojson_url).to_crs("EPSG:4326")
-        return gdf
-    except Exception:
+    print("URL: ", url)
+    # try:
+    r = requests.get(url, timeout=timeout)
+    if r.status_code != 200 or not r.text.strip():
         return None
+    data = r.json()
+    geojson_url = data.get("gjDownloadURL")
+    if not geojson_url:
+        return None
+    gdf = gpd.read_file(geojson_url).to_crs("EPSG:4326")
+    return gdf
+    # except Exception:
+    #     return None
 
 
 def join_admin_boundaries(

@@ -24,6 +24,8 @@ def package_country(iso3):
     os.makedirs(OUT_DIR, exist_ok=True)
     zip_path = os.path.join(OUT_DIR, f"{iso3}.zip")
 
+    print("ZIP PATH: ", zip_path)
+
     with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
         # Add available dimension CSVs
         for dim in DIMS:
